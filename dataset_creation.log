@@ -1,0 +1,595 @@
+2024-11-10 21:37:09,597 - INFO - Starting Issue Dataset Creation Script.
+2024-11-10 21:37:09,597 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-10 21:37:11,648 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-10 21:37:11,648 - INFO - Attempting to get repository at path: pytest
+2024-11-10 21:37:11,668 - INFO - Successfully obtained repository: /home/hoka/code/compex/compex/pytest
+2024-11-10 21:37:11,668 - INFO - Creating dataset for issues: [12000, 12001, 12002, 12003, 12004, 12005]
+2024-11-10 21:37:11,668 - INFO - Processing issue #12000
+2024-11-10 21:37:11,668 - INFO - Searching for commits related to issue number: 12000
+2024-11-10 21:37:11,717 - DEBUG - Found commit related to issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-10 21:37:12,615 - INFO - Total commits found for issue #12000: 1
+2024-11-10 21:37:12,615 - INFO - Fetching description for issue #12000
+2024-11-10 21:37:13,401 - DEBUG - Issue #12000 description fetched successfully.
+2024-11-10 21:37:13,401 - INFO - First commit for issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-10 21:37:13,401 - INFO - Extracting codebase before commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-10 21:37:13,454 - INFO - Extracted codebase before commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-10 21:37:15,490 - INFO - Getting files changed in commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-10 21:37:15,498 - DEBUG - Files changed in commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858: {'doc/en/requirements.txt': {'insertions': 2, 'deletions': 1, 'lines': 3}}
+2024-11-10 21:37:15,498 - DEBUG - Written data for issue #12000 to data/issue_dataset.jsonl
+2024-11-10 21:37:15,498 - INFO - Processing issue #12001
+2024-11-10 21:37:15,498 - INFO - Searching for commits related to issue number: 12001
+2024-11-10 21:37:16,441 - INFO - Total commits found for issue #12001: 0
+2024-11-10 21:37:16,441 - WARNING - No commits found for issue #12001, skipping...
+2024-11-10 21:37:16,441 - INFO - Processing issue #12002
+2024-11-10 21:37:16,441 - INFO - Searching for commits related to issue number: 12002
+2024-11-10 21:37:16,487 - DEBUG - Found commit related to issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-10 21:37:17,388 - INFO - Total commits found for issue #12002: 1
+2024-11-10 21:37:17,389 - INFO - Fetching description for issue #12002
+2024-11-10 21:37:18,148 - DEBUG - Issue #12002 description fetched successfully.
+2024-11-10 21:37:18,149 - INFO - First commit for issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-10 21:37:18,150 - INFO - Extracting codebase before commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-10 21:37:18,187 - INFO - Extracted codebase before commit 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-10 21:37:20,056 - INFO - Getting files changed in commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-10 21:37:20,062 - DEBUG - Files changed in commit 40011b838b67691c76302f3cd8d18862f37b9370: {'doc/en/_templates/slim_searchbox.html': {'insertions': 2, 'deletions': 3, 'lines': 5}, 'doc/en/requirements.txt': {'insertions': 1, 'deletions': 2, 'lines': 3}}
+2024-11-10 21:37:20,062 - DEBUG - Written data for issue #12002 to data/issue_dataset.jsonl
+2024-11-10 21:37:20,062 - INFO - Processing issue #12003
+2024-11-10 21:37:20,062 - INFO - Searching for commits related to issue number: 12003
+2024-11-10 21:37:20,106 - DEBUG - Found commit related to issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-10 21:37:21,012 - INFO - Total commits found for issue #12003: 1
+2024-11-10 21:37:21,012 - INFO - Fetching description for issue #12003
+2024-11-10 21:37:21,730 - DEBUG - Issue #12003 description fetched successfully.
+2024-11-10 21:37:21,731 - INFO - First commit for issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-10 21:37:21,732 - INFO - Extracting codebase before commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-10 21:37:21,769 - INFO - Extracted codebase before commit b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-10 21:37:23,686 - INFO - Getting files changed in commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-10 21:37:23,697 - DEBUG - Files changed in commit b37696703b356380339aadf9d4e4b80450fb394c: {'doc/en/reference/plugin_list.rst': {'insertions': 312, 'deletions': 96, 'lines': 408}}
+2024-11-10 21:37:23,698 - DEBUG - Written data for issue #12003 to data/issue_dataset.jsonl
+2024-11-10 21:37:23,698 - INFO - Processing issue #12004
+2024-11-10 21:37:23,698 - INFO - Searching for commits related to issue number: 12004
+2024-11-10 21:37:24,630 - INFO - Total commits found for issue #12004: 0
+2024-11-10 21:37:24,630 - WARNING - No commits found for issue #12004, skipping...
+2024-11-10 21:37:24,630 - INFO - Processing issue #12005
+2024-11-10 21:37:24,630 - INFO - Searching for commits related to issue number: 12005
+2024-11-10 21:37:25,579 - INFO - Total commits found for issue #12005: 0
+2024-11-10 21:37:25,579 - WARNING - No commits found for issue #12005, skipping...
+2024-11-10 21:37:25,579 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-11-10 21:37:25,579 - INFO - Issue Dataset Creation Script finished.
+2024-11-11 13:17:57,559 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 13:17:57,561 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 13:17:57,564 - ERROR - Error loading CodeBERT model: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /microsoft/codebert-base/resolve/main/tokenizer_config.json (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdd3659ba90>: Failed to establish a new connection: [Errno 111] Connection refused')))"), '(Request ID: 6a9d4c15-743a-49bf-8816-3623d9a93d87)')
+2024-11-11 13:18:46,088 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 13:18:46,088 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 13:18:46,090 - ERROR - Error loading CodeBERT model: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /microsoft/codebert-base/resolve/main/tokenizer_config.json (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe8d9929950>: Failed to establish a new connection: [Errno 111] Connection refused')))"), '(Request ID: 830a87c6-b8a1-4899-98d4-be9cbfb7e3d3)')
+2024-11-11 13:19:25,888 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 13:19:25,888 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 13:19:25,890 - ERROR - Error loading CodeBERT model: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /microsoft/codebert-base/resolve/main/tokenizer_config.json (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f618d92a990>: Failed to establish a new connection: [Errno 111] Connection refused')))"), '(Request ID: bee258d2-0ad8-49db-bb67-e8014ceb4649)')
+2024-11-11 13:22:44,376 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 13:22:44,376 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 13:22:46,722 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-11 13:22:46,722 - INFO - Attempting to get repository at path: pytest
+2024-11-11 13:22:46,744 - INFO - Successfully obtained repository: /home/hoka/code/compex/compex/pytest
+2024-11-11 13:22:46,744 - INFO - Creating dataset for issues: [12000, 12001, 12002, 12003, 12004, 12005, 12006, 12007, 12008, 12009, 12010]
+2024-11-11 13:22:46,744 - INFO - Processing issue #12000
+2024-11-11 13:22:46,744 - INFO - Searching for commits related to issue number: 12000
+2024-11-11 13:22:46,793 - DEBUG - Found commit related to issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:22:47,747 - INFO - Total commits found for issue #12000: 1
+2024-11-11 13:22:47,747 - INFO - Fetching description for issue #12000
+2024-11-11 13:22:48,689 - DEBUG - Issue #12000 description fetched successfully.
+2024-11-11 13:22:48,689 - INFO - First commit for issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:22:48,689 - INFO - Extracting codebase before commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:22:48,743 - INFO - Extracted codebase before commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:22:50,886 - INFO - Getting files changed in commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:22:50,892 - DEBUG - Files changed in commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858: {'doc/en/requirements.txt': {'insertions': 2, 'deletions': 1, 'lines': 3}}
+2024-11-11 13:22:50,893 - DEBUG - Written data for issue #12000 to data/issue_dataset.jsonl
+2024-11-11 13:22:50,893 - INFO - Processing issue #12001
+2024-11-11 13:22:50,893 - INFO - Searching for commits related to issue number: 12001
+2024-11-11 13:22:51,880 - INFO - Total commits found for issue #12001: 0
+2024-11-11 13:22:51,881 - WARNING - No commits found for issue #12001, skipping...
+2024-11-11 13:22:51,881 - INFO - Processing issue #12002
+2024-11-11 13:22:51,881 - INFO - Searching for commits related to issue number: 12002
+2024-11-11 13:22:51,927 - DEBUG - Found commit related to issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:22:52,856 - INFO - Total commits found for issue #12002: 1
+2024-11-11 13:22:52,856 - INFO - Fetching description for issue #12002
+2024-11-11 13:22:53,794 - DEBUG - Issue #12002 description fetched successfully.
+2024-11-11 13:22:53,794 - INFO - First commit for issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:22:53,795 - INFO - Extracting codebase before commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:22:53,830 - INFO - Extracted codebase before commit 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:22:55,857 - INFO - Getting files changed in commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:22:55,863 - DEBUG - Files changed in commit 40011b838b67691c76302f3cd8d18862f37b9370: {'doc/en/_templates/slim_searchbox.html': {'insertions': 2, 'deletions': 3, 'lines': 5}, 'doc/en/requirements.txt': {'insertions': 1, 'deletions': 2, 'lines': 3}}
+2024-11-11 13:22:55,864 - DEBUG - Written data for issue #12002 to data/issue_dataset.jsonl
+2024-11-11 13:22:55,864 - INFO - Processing issue #12003
+2024-11-11 13:22:55,864 - INFO - Searching for commits related to issue number: 12003
+2024-11-11 13:22:55,908 - DEBUG - Found commit related to issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:22:56,871 - INFO - Total commits found for issue #12003: 1
+2024-11-11 13:22:56,871 - INFO - Fetching description for issue #12003
+2024-11-11 13:22:57,787 - DEBUG - Issue #12003 description fetched successfully.
+2024-11-11 13:22:57,787 - INFO - First commit for issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:22:57,788 - INFO - Extracting codebase before commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:22:57,820 - INFO - Extracted codebase before commit b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:22:59,761 - INFO - Getting files changed in commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:22:59,772 - DEBUG - Files changed in commit b37696703b356380339aadf9d4e4b80450fb394c: {'doc/en/reference/plugin_list.rst': {'insertions': 312, 'deletions': 96, 'lines': 408}}
+2024-11-11 13:22:59,772 - DEBUG - Written data for issue #12003 to data/issue_dataset.jsonl
+2024-11-11 13:22:59,772 - INFO - Processing issue #12004
+2024-11-11 13:22:59,772 - INFO - Searching for commits related to issue number: 12004
+2024-11-11 13:23:00,775 - INFO - Total commits found for issue #12004: 0
+2024-11-11 13:23:00,775 - WARNING - No commits found for issue #12004, skipping...
+2024-11-11 13:23:00,776 - INFO - Processing issue #12005
+2024-11-11 13:23:00,776 - INFO - Searching for commits related to issue number: 12005
+2024-11-11 13:23:01,774 - INFO - Total commits found for issue #12005: 0
+2024-11-11 13:23:01,774 - WARNING - No commits found for issue #12005, skipping...
+2024-11-11 13:23:01,775 - INFO - Processing issue #12006
+2024-11-11 13:23:01,775 - INFO - Searching for commits related to issue number: 12006
+2024-11-11 13:23:01,819 - DEBUG - Found commit related to issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:02,760 - INFO - Total commits found for issue #12006: 1
+2024-11-11 13:23:02,760 - INFO - Fetching description for issue #12006
+2024-11-11 13:23:03,917 - DEBUG - Issue #12006 description fetched successfully.
+2024-11-11 13:23:03,918 - INFO - First commit for issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:03,918 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:03,948 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:05,877 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:05,883 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 13:23:05,883 - DEBUG - Written data for issue #12006 to data/issue_dataset.jsonl
+2024-11-11 13:23:05,884 - INFO - Processing issue #12007
+2024-11-11 13:23:05,884 - INFO - Searching for commits related to issue number: 12007
+2024-11-11 13:23:05,922 - DEBUG - Found commit related to issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:06,895 - INFO - Total commits found for issue #12007: 1
+2024-11-11 13:23:06,895 - INFO - Fetching description for issue #12007
+2024-11-11 13:23:07,842 - DEBUG - Issue #12007 description fetched successfully.
+2024-11-11 13:23:07,842 - INFO - First commit for issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:07,842 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:07,876 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:09,874 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:23:09,880 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 13:23:09,880 - DEBUG - Written data for issue #12007 to data/issue_dataset.jsonl
+2024-11-11 13:23:09,880 - INFO - Processing issue #12008
+2024-11-11 13:23:09,880 - INFO - Searching for commits related to issue number: 12008
+2024-11-11 13:23:09,888 - DEBUG - Found commit related to issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:23:10,882 - INFO - Total commits found for issue #12008: 1
+2024-11-11 13:23:10,882 - INFO - Fetching description for issue #12008
+2024-11-11 13:23:11,927 - DEBUG - Issue #12008 description fetched successfully.
+2024-11-11 13:23:11,927 - INFO - First commit for issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:23:11,927 - INFO - Extracting codebase before commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:23:11,963 - INFO - Extracted codebase before commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:23:14,132 - INFO - Getting files changed in commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:23:14,142 - DEBUG - Files changed in commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0: {'changelog/12008.bugfix.rst': {'insertions': 1, 'deletions': 0, 'lines': 1}, 'src/_pytest/python.py': {'insertions': 10, 'deletions': 0, 'lines': 10}, 'testing/example_scripts/issue_519.py': {'insertions': 2, 'deletions': 2, 'lines': 4}, 'testing/python/metafunc.py': {'insertions': 3, 'deletions': 3, 'lines': 6}}
+2024-11-11 13:23:14,142 - DEBUG - Written data for issue #12008 to data/issue_dataset.jsonl
+2024-11-11 13:23:14,142 - INFO - Processing issue #12009
+2024-11-11 13:23:14,142 - INFO - Searching for commits related to issue number: 12009
+2024-11-11 13:23:15,282 - INFO - Total commits found for issue #12009: 0
+2024-11-11 13:23:15,282 - WARNING - No commits found for issue #12009, skipping...
+2024-11-11 13:23:15,282 - INFO - Processing issue #12010
+2024-11-11 13:23:15,282 - INFO - Searching for commits related to issue number: 12010
+2024-11-11 13:23:16,448 - INFO - Total commits found for issue #12010: 0
+2024-11-11 13:23:16,448 - WARNING - No commits found for issue #12010, skipping...
+2024-11-11 13:23:16,448 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-11-11 13:23:16,448 - INFO - Issue Dataset Creation Script finished.
+2024-11-11 13:33:40,420 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 13:33:40,420 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 13:33:42,574 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-11 13:33:42,575 - INFO - Attempting to get repository at path: pytest
+2024-11-11 13:33:42,593 - INFO - Successfully obtained repository: /home/hoka/code/compex/compex/pytest
+2024-11-11 13:33:42,594 - INFO - Creating dataset for issues: [12000]
+2024-11-11 13:33:42,594 - INFO - Processing issue #12000
+2024-11-11 13:33:42,594 - INFO - Searching for commits related to issue number: 12000
+2024-11-11 13:33:42,639 - DEBUG - Found commit related to issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:33:43,523 - INFO - Total commits found for issue #12000: 1
+2024-11-11 13:33:43,523 - INFO - Fetching description for issue #12000
+2024-11-11 13:33:44,548 - DEBUG - Issue #12000 description fetched successfully.
+2024-11-11 13:33:44,549 - INFO - First commit for issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:33:44,549 - INFO - Extracting codebase before commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:33:45,158 - INFO - Extracted codebase before commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:33:47,117 - INFO - Getting files changed in commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:33:47,123 - DEBUG - Files changed in commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858: {'doc/en/requirements.txt': {'insertions': 2, 'deletions': 1, 'lines': 3}}
+2024-11-11 13:33:47,123 - DEBUG - Written data for issue #12000 to data/issue_dataset.jsonl
+2024-11-11 13:33:47,123 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-11-11 13:33:47,123 - INFO - Issue Dataset Creation Script finished.
+2024-11-11 13:35:21,968 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 13:35:21,968 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 13:35:24,095 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-11 13:35:24,095 - INFO - Attempting to get repository at path: pytest
+2024-11-11 13:35:24,121 - INFO - Successfully obtained repository: /home/hoka/code/compex/compex/pytest
+2024-11-11 13:35:24,121 - INFO - Creating dataset for issues: [12000, 12001, 12002, 12003, 12004, 12005, 12006, 12007, 12008, 12009, 12010]
+2024-11-11 13:35:24,121 - INFO - Processing issue #12000
+2024-11-11 13:35:24,121 - INFO - Searching for commits related to issue number: 12000
+2024-11-11 13:35:24,171 - DEBUG - Found commit related to issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:35:25,053 - INFO - Total commits found for issue #12000: 1
+2024-11-11 13:35:25,053 - INFO - Fetching description for issue #12000
+2024-11-11 13:35:26,512 - DEBUG - Issue #12000 description fetched successfully.
+2024-11-11 13:35:26,513 - INFO - First commit for issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:35:26,513 - INFO - Extracting codebase before commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:35:26,581 - INFO - Extracted codebase before commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:35:28,613 - INFO - Getting files changed in commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:35:28,619 - DEBUG - Files changed in commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858: {'doc/en/requirements.txt': {'insertions': 2, 'deletions': 1, 'lines': 3}}
+2024-11-11 13:35:28,619 - DEBUG - Written data for issue #12000 to data/issue_dataset.jsonl
+2024-11-11 13:35:28,620 - INFO - Processing issue #12001
+2024-11-11 13:35:28,620 - INFO - Searching for commits related to issue number: 12001
+2024-11-11 13:35:29,551 - INFO - Total commits found for issue #12001: 0
+2024-11-11 13:35:29,551 - WARNING - No commits found for issue #12001, skipping...
+2024-11-11 13:35:29,551 - INFO - Processing issue #12002
+2024-11-11 13:35:29,552 - INFO - Searching for commits related to issue number: 12002
+2024-11-11 13:35:29,598 - DEBUG - Found commit related to issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:35:30,499 - INFO - Total commits found for issue #12002: 1
+2024-11-11 13:35:30,499 - INFO - Fetching description for issue #12002
+2024-11-11 13:35:31,479 - DEBUG - Issue #12002 description fetched successfully.
+2024-11-11 13:35:31,480 - INFO - First commit for issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:35:31,480 - INFO - Extracting codebase before commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:35:31,529 - INFO - Extracted codebase before commit 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:35:33,390 - INFO - Getting files changed in commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:35:33,396 - DEBUG - Files changed in commit 40011b838b67691c76302f3cd8d18862f37b9370: {'doc/en/_templates/slim_searchbox.html': {'insertions': 2, 'deletions': 3, 'lines': 5}, 'doc/en/requirements.txt': {'insertions': 1, 'deletions': 2, 'lines': 3}}
+2024-11-11 13:35:33,396 - DEBUG - Written data for issue #12002 to data/issue_dataset.jsonl
+2024-11-11 13:35:33,396 - INFO - Processing issue #12003
+2024-11-11 13:35:33,396 - INFO - Searching for commits related to issue number: 12003
+2024-11-11 13:35:33,437 - DEBUG - Found commit related to issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:35:34,342 - INFO - Total commits found for issue #12003: 1
+2024-11-11 13:35:34,342 - INFO - Fetching description for issue #12003
+2024-11-11 13:35:35,439 - DEBUG - Issue #12003 description fetched successfully.
+2024-11-11 13:35:35,440 - INFO - First commit for issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:35:35,441 - INFO - Extracting codebase before commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:35:35,484 - INFO - Extracted codebase before commit b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:35:37,317 - INFO - Getting files changed in commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:35:37,328 - DEBUG - Files changed in commit b37696703b356380339aadf9d4e4b80450fb394c: {'doc/en/reference/plugin_list.rst': {'insertions': 312, 'deletions': 96, 'lines': 408}}
+2024-11-11 13:35:37,329 - DEBUG - Written data for issue #12003 to data/issue_dataset.jsonl
+2024-11-11 13:35:37,329 - INFO - Processing issue #12004
+2024-11-11 13:35:37,329 - INFO - Searching for commits related to issue number: 12004
+2024-11-11 13:35:38,283 - INFO - Total commits found for issue #12004: 0
+2024-11-11 13:35:38,283 - WARNING - No commits found for issue #12004, skipping...
+2024-11-11 13:35:38,283 - INFO - Processing issue #12005
+2024-11-11 13:35:38,283 - INFO - Searching for commits related to issue number: 12005
+2024-11-11 13:35:39,232 - INFO - Total commits found for issue #12005: 0
+2024-11-11 13:35:39,232 - WARNING - No commits found for issue #12005, skipping...
+2024-11-11 13:35:39,232 - INFO - Processing issue #12006
+2024-11-11 13:35:39,233 - INFO - Searching for commits related to issue number: 12006
+2024-11-11 13:35:39,275 - DEBUG - Found commit related to issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:40,165 - INFO - Total commits found for issue #12006: 1
+2024-11-11 13:35:40,165 - INFO - Fetching description for issue #12006
+2024-11-11 13:35:41,282 - DEBUG - Issue #12006 description fetched successfully.
+2024-11-11 13:35:41,284 - INFO - First commit for issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:41,284 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:41,327 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:43,191 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:43,197 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 13:35:43,197 - DEBUG - Written data for issue #12006 to data/issue_dataset.jsonl
+2024-11-11 13:35:43,197 - INFO - Processing issue #12007
+2024-11-11 13:35:43,197 - INFO - Searching for commits related to issue number: 12007
+2024-11-11 13:35:43,238 - DEBUG - Found commit related to issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:44,139 - INFO - Total commits found for issue #12007: 1
+2024-11-11 13:35:44,139 - INFO - Fetching description for issue #12007
+2024-11-11 13:35:45,352 - DEBUG - Issue #12007 description fetched successfully.
+2024-11-11 13:35:45,352 - INFO - First commit for issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:45,353 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:45,396 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:47,257 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:35:47,263 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 13:35:47,263 - DEBUG - Written data for issue #12007 to data/issue_dataset.jsonl
+2024-11-11 13:35:47,264 - INFO - Processing issue #12008
+2024-11-11 13:35:47,264 - INFO - Searching for commits related to issue number: 12008
+2024-11-11 13:35:47,273 - DEBUG - Found commit related to issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:35:48,219 - INFO - Total commits found for issue #12008: 1
+2024-11-11 13:35:48,220 - INFO - Fetching description for issue #12008
+2024-11-11 13:35:49,414 - DEBUG - Issue #12008 description fetched successfully.
+2024-11-11 13:35:49,414 - INFO - First commit for issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:35:49,415 - INFO - Extracting codebase before commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:35:49,467 - INFO - Extracted codebase before commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:35:51,393 - INFO - Getting files changed in commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:35:51,402 - DEBUG - Files changed in commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0: {'changelog/12008.bugfix.rst': {'insertions': 1, 'deletions': 0, 'lines': 1}, 'src/_pytest/python.py': {'insertions': 10, 'deletions': 0, 'lines': 10}, 'testing/example_scripts/issue_519.py': {'insertions': 2, 'deletions': 2, 'lines': 4}, 'testing/python/metafunc.py': {'insertions': 3, 'deletions': 3, 'lines': 6}}
+2024-11-11 13:35:51,402 - DEBUG - Written data for issue #12008 to data/issue_dataset.jsonl
+2024-11-11 13:35:51,402 - INFO - Processing issue #12009
+2024-11-11 13:35:51,402 - INFO - Searching for commits related to issue number: 12009
+2024-11-11 13:35:52,347 - INFO - Total commits found for issue #12009: 0
+2024-11-11 13:35:52,348 - WARNING - No commits found for issue #12009, skipping...
+2024-11-11 13:35:52,348 - INFO - Processing issue #12010
+2024-11-11 13:35:52,348 - INFO - Searching for commits related to issue number: 12010
+2024-11-11 13:35:53,313 - INFO - Total commits found for issue #12010: 0
+2024-11-11 13:35:53,314 - WARNING - No commits found for issue #12010, skipping...
+2024-11-11 13:35:53,314 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-11-11 13:35:53,314 - INFO - Issue Dataset Creation Script finished.
+2024-11-11 13:38:26,154 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 13:38:26,155 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 13:38:28,074 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-11 13:38:28,074 - INFO - Attempting to get repository at path: pytest
+2024-11-11 13:38:28,094 - INFO - Successfully obtained repository: /home/hoka/code/compex/compex/pytest
+2024-11-11 13:38:28,094 - INFO - Creating dataset for issues: [12000, 12001, 12002, 12003, 12004, 12005, 12006, 12007, 12008, 12009, 12010]
+2024-11-11 13:38:28,094 - INFO - Processing issue #12000
+2024-11-11 13:38:28,094 - INFO - Searching for commits related to issue number: 12000
+2024-11-11 13:38:28,137 - DEBUG - Found commit related to issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:38:29,022 - INFO - Total commits found for issue #12000: 1
+2024-11-11 13:38:29,022 - INFO - Fetching description for issue #12000
+2024-11-11 13:38:30,063 - DEBUG - Issue #12000 description fetched successfully.
+2024-11-11 13:38:30,064 - INFO - First commit for issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:38:30,064 - INFO - Extracting codebase before commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:38:30,111 - INFO - Extracted codebase before commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:38:32,110 - INFO - Getting files changed in commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 13:38:32,115 - DEBUG - Files changed in commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858: {'doc/en/requirements.txt': {'insertions': 2, 'deletions': 1, 'lines': 3}}
+2024-11-11 13:38:32,116 - DEBUG - Written data for issue #12000 to data/issue_dataset.jsonl
+2024-11-11 13:38:32,116 - INFO - Processing issue #12001
+2024-11-11 13:38:32,116 - INFO - Searching for commits related to issue number: 12001
+2024-11-11 13:38:33,040 - INFO - Total commits found for issue #12001: 0
+2024-11-11 13:38:33,040 - WARNING - No commits found for issue #12001, skipping...
+2024-11-11 13:38:33,040 - INFO - Processing issue #12002
+2024-11-11 13:38:33,040 - INFO - Searching for commits related to issue number: 12002
+2024-11-11 13:38:33,081 - DEBUG - Found commit related to issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:38:33,982 - INFO - Total commits found for issue #12002: 1
+2024-11-11 13:38:33,982 - INFO - Fetching description for issue #12002
+2024-11-11 13:38:34,931 - DEBUG - Issue #12002 description fetched successfully.
+2024-11-11 13:38:34,932 - INFO - First commit for issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:38:34,934 - INFO - Extracting codebase before commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:38:34,965 - INFO - Extracted codebase before commit 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:38:36,845 - INFO - Getting files changed in commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 13:38:36,850 - DEBUG - Files changed in commit 40011b838b67691c76302f3cd8d18862f37b9370: {'doc/en/_templates/slim_searchbox.html': {'insertions': 2, 'deletions': 3, 'lines': 5}, 'doc/en/requirements.txt': {'insertions': 1, 'deletions': 2, 'lines': 3}}
+2024-11-11 13:38:36,851 - DEBUG - Written data for issue #12002 to data/issue_dataset.jsonl
+2024-11-11 13:38:36,851 - INFO - Processing issue #12003
+2024-11-11 13:38:36,851 - INFO - Searching for commits related to issue number: 12003
+2024-11-11 13:38:36,893 - DEBUG - Found commit related to issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:38:37,781 - INFO - Total commits found for issue #12003: 1
+2024-11-11 13:38:37,782 - INFO - Fetching description for issue #12003
+2024-11-11 13:38:38,859 - DEBUG - Issue #12003 description fetched successfully.
+2024-11-11 13:38:38,861 - INFO - First commit for issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:38:38,862 - INFO - Extracting codebase before commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:38:38,895 - INFO - Extracted codebase before commit b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:38:40,758 - INFO - Getting files changed in commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 13:38:40,770 - DEBUG - Files changed in commit b37696703b356380339aadf9d4e4b80450fb394c: {'doc/en/reference/plugin_list.rst': {'insertions': 312, 'deletions': 96, 'lines': 408}}
+2024-11-11 13:38:40,770 - DEBUG - Written data for issue #12003 to data/issue_dataset.jsonl
+2024-11-11 13:38:40,770 - INFO - Processing issue #12004
+2024-11-11 13:38:40,770 - INFO - Searching for commits related to issue number: 12004
+2024-11-11 13:38:41,696 - INFO - Total commits found for issue #12004: 0
+2024-11-11 13:38:41,697 - WARNING - No commits found for issue #12004, skipping...
+2024-11-11 13:38:41,697 - INFO - Processing issue #12005
+2024-11-11 13:38:41,697 - INFO - Searching for commits related to issue number: 12005
+2024-11-11 13:38:42,646 - INFO - Total commits found for issue #12005: 0
+2024-11-11 13:38:42,646 - WARNING - No commits found for issue #12005, skipping...
+2024-11-11 13:38:42,646 - INFO - Processing issue #12006
+2024-11-11 13:38:42,646 - INFO - Searching for commits related to issue number: 12006
+2024-11-11 13:38:42,688 - DEBUG - Found commit related to issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:43,575 - INFO - Total commits found for issue #12006: 1
+2024-11-11 13:38:43,575 - INFO - Fetching description for issue #12006
+2024-11-11 13:38:44,713 - DEBUG - Issue #12006 description fetched successfully.
+2024-11-11 13:38:44,714 - INFO - First commit for issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:44,714 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:44,747 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:46,589 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:46,595 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 13:38:46,595 - DEBUG - Written data for issue #12006 to data/issue_dataset.jsonl
+2024-11-11 13:38:46,595 - INFO - Processing issue #12007
+2024-11-11 13:38:46,595 - INFO - Searching for commits related to issue number: 12007
+2024-11-11 13:38:46,637 - DEBUG - Found commit related to issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:47,529 - INFO - Total commits found for issue #12007: 1
+2024-11-11 13:38:47,529 - INFO - Fetching description for issue #12007
+2024-11-11 13:38:48,463 - DEBUG - Issue #12007 description fetched successfully.
+2024-11-11 13:38:48,463 - INFO - First commit for issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:48,463 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:48,496 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:50,362 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 13:38:50,369 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 13:38:50,369 - DEBUG - Written data for issue #12007 to data/issue_dataset.jsonl
+2024-11-11 13:38:50,369 - INFO - Processing issue #12008
+2024-11-11 13:38:50,370 - INFO - Searching for commits related to issue number: 12008
+2024-11-11 13:38:50,380 - DEBUG - Found commit related to issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:38:51,319 - INFO - Total commits found for issue #12008: 1
+2024-11-11 13:38:51,319 - INFO - Fetching description for issue #12008
+2024-11-11 13:38:52,534 - DEBUG - Issue #12008 description fetched successfully.
+2024-11-11 13:38:52,535 - INFO - First commit for issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:38:52,536 - INFO - Extracting codebase before commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:38:52,577 - INFO - Extracted codebase before commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:38:54,509 - INFO - Getting files changed in commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 13:38:54,516 - DEBUG - Files changed in commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0: {'changelog/12008.bugfix.rst': {'insertions': 1, 'deletions': 0, 'lines': 1}, 'src/_pytest/python.py': {'insertions': 10, 'deletions': 0, 'lines': 10}, 'testing/example_scripts/issue_519.py': {'insertions': 2, 'deletions': 2, 'lines': 4}, 'testing/python/metafunc.py': {'insertions': 3, 'deletions': 3, 'lines': 6}}
+2024-11-11 13:38:54,516 - DEBUG - Written data for issue #12008 to data/issue_dataset.jsonl
+2024-11-11 13:38:54,516 - INFO - Processing issue #12009
+2024-11-11 13:38:54,517 - INFO - Searching for commits related to issue number: 12009
+2024-11-11 13:38:55,439 - INFO - Total commits found for issue #12009: 0
+2024-11-11 13:38:55,439 - WARNING - No commits found for issue #12009, skipping...
+2024-11-11 13:38:55,439 - INFO - Processing issue #12010
+2024-11-11 13:38:55,439 - INFO - Searching for commits related to issue number: 12010
+2024-11-11 13:38:56,373 - INFO - Total commits found for issue #12010: 0
+2024-11-11 13:38:56,373 - WARNING - No commits found for issue #12010, skipping...
+2024-11-11 13:38:56,373 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-11-11 13:38:56,373 - INFO - Issue Dataset Creation Script finished.
+2024-11-11 16:50:32,060 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 16:50:32,060 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 16:50:33,997 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-11 16:50:33,997 - INFO - Loading Sentence-BERT model for issue description embeddings...
+2024-11-11 16:50:41,644 - INFO - Sentence-BERT model loaded successfully.
+2024-11-11 16:50:41,644 - INFO - Attempting to get repository at path: pytest
+2024-11-11 16:50:41,665 - INFO - Successfully obtained repository: /home/hoka/code/compex/compex/pytest
+2024-11-11 16:50:41,665 - INFO - Creating dataset for issues: [12000, 12001, 12002, 12003, 12004, 12005, 12006, 12007, 12008, 12009, 12010]
+2024-11-11 16:50:41,666 - INFO - Processing issue #12000
+2024-11-11 16:50:41,666 - INFO - Searching for commits related to issue number: 12000
+2024-11-11 16:50:41,712 - DEBUG - Found commit related to issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 16:50:42,619 - INFO - Total commits found for issue #12000: 1
+2024-11-11 16:50:42,619 - INFO - Fetching description for issue #12000
+2024-11-11 16:50:43,553 - DEBUG - Issue #12000 description fetched successfully.
+2024-11-11 16:50:44,750 - INFO - First commit for issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 16:50:44,750 - INFO - Extracting codebase before commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 16:50:44,802 - INFO - Extracted codebase before commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 16:50:46,932 - INFO - Getting files changed in commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 16:50:46,938 - DEBUG - Files changed in commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858: {'doc/en/requirements.txt': {'insertions': 2, 'deletions': 1, 'lines': 3}}
+2024-11-11 16:50:46,939 - DEBUG - Written data for issue #12000 to data/issue_dataset.jsonl
+2024-11-11 16:50:46,939 - INFO - Processing issue #12001
+2024-11-11 16:50:46,939 - INFO - Searching for commits related to issue number: 12001
+2024-11-11 16:50:47,945 - INFO - Total commits found for issue #12001: 0
+2024-11-11 16:50:47,945 - WARNING - No commits found for issue #12001, skipping...
+2024-11-11 16:50:47,945 - INFO - Processing issue #12002
+2024-11-11 16:50:47,945 - INFO - Searching for commits related to issue number: 12002
+2024-11-11 16:50:47,989 - DEBUG - Found commit related to issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 16:50:48,957 - INFO - Total commits found for issue #12002: 1
+2024-11-11 16:50:48,958 - INFO - Fetching description for issue #12002
+2024-11-11 16:50:49,983 - DEBUG - Issue #12002 description fetched successfully.
+2024-11-11 16:50:50,000 - INFO - First commit for issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 16:50:50,000 - INFO - Extracting codebase before commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 16:50:50,030 - INFO - Extracted codebase before commit 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 16:50:51,975 - INFO - Getting files changed in commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 16:50:51,980 - DEBUG - Files changed in commit 40011b838b67691c76302f3cd8d18862f37b9370: {'doc/en/_templates/slim_searchbox.html': {'insertions': 2, 'deletions': 3, 'lines': 5}, 'doc/en/requirements.txt': {'insertions': 1, 'deletions': 2, 'lines': 3}}
+2024-11-11 16:50:51,981 - DEBUG - Written data for issue #12002 to data/issue_dataset.jsonl
+2024-11-11 16:50:51,981 - INFO - Processing issue #12003
+2024-11-11 16:50:51,981 - INFO - Searching for commits related to issue number: 12003
+2024-11-11 16:50:52,025 - DEBUG - Found commit related to issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 16:50:52,993 - INFO - Total commits found for issue #12003: 1
+2024-11-11 16:50:52,993 - INFO - Fetching description for issue #12003
+2024-11-11 16:50:54,038 - DEBUG - Issue #12003 description fetched successfully.
+2024-11-11 16:50:54,054 - INFO - First commit for issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 16:50:54,054 - INFO - Extracting codebase before commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 16:50:54,086 - INFO - Extracted codebase before commit b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 16:50:56,026 - INFO - Getting files changed in commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 16:50:56,037 - DEBUG - Files changed in commit b37696703b356380339aadf9d4e4b80450fb394c: {'doc/en/reference/plugin_list.rst': {'insertions': 312, 'deletions': 96, 'lines': 408}}
+2024-11-11 16:50:56,038 - DEBUG - Written data for issue #12003 to data/issue_dataset.jsonl
+2024-11-11 16:50:56,038 - INFO - Processing issue #12004
+2024-11-11 16:50:56,038 - INFO - Searching for commits related to issue number: 12004
+2024-11-11 16:50:56,988 - INFO - Total commits found for issue #12004: 0
+2024-11-11 16:50:56,989 - WARNING - No commits found for issue #12004, skipping...
+2024-11-11 16:50:56,989 - INFO - Processing issue #12005
+2024-11-11 16:50:56,989 - INFO - Searching for commits related to issue number: 12005
+2024-11-11 16:50:57,968 - INFO - Total commits found for issue #12005: 0
+2024-11-11 16:50:57,968 - WARNING - No commits found for issue #12005, skipping...
+2024-11-11 16:50:57,968 - INFO - Processing issue #12006
+2024-11-11 16:50:57,968 - INFO - Searching for commits related to issue number: 12006
+2024-11-11 16:50:58,009 - DEBUG - Found commit related to issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:50:58,933 - INFO - Total commits found for issue #12006: 1
+2024-11-11 16:50:58,933 - INFO - Fetching description for issue #12006
+2024-11-11 16:50:59,981 - DEBUG - Issue #12006 description fetched successfully.
+2024-11-11 16:51:00,002 - INFO - First commit for issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:00,002 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:00,035 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:01,977 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:01,983 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 16:51:01,984 - DEBUG - Written data for issue #12006 to data/issue_dataset.jsonl
+2024-11-11 16:51:01,984 - INFO - Processing issue #12007
+2024-11-11 16:51:01,984 - INFO - Searching for commits related to issue number: 12007
+2024-11-11 16:51:02,027 - DEBUG - Found commit related to issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:02,952 - INFO - Total commits found for issue #12007: 1
+2024-11-11 16:51:02,952 - INFO - Fetching description for issue #12007
+2024-11-11 16:51:03,922 - DEBUG - Issue #12007 description fetched successfully.
+2024-11-11 16:51:03,938 - INFO - First commit for issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:03,939 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:03,970 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:05,896 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 16:51:05,902 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 16:51:05,903 - DEBUG - Written data for issue #12007 to data/issue_dataset.jsonl
+2024-11-11 16:51:05,903 - INFO - Processing issue #12008
+2024-11-11 16:51:05,903 - INFO - Searching for commits related to issue number: 12008
+2024-11-11 16:51:05,912 - DEBUG - Found commit related to issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 16:51:06,851 - INFO - Total commits found for issue #12008: 1
+2024-11-11 16:51:06,851 - INFO - Fetching description for issue #12008
+2024-11-11 16:51:07,839 - DEBUG - Issue #12008 description fetched successfully.
+2024-11-11 16:51:07,866 - INFO - First commit for issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 16:51:07,866 - INFO - Extracting codebase before commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 16:51:07,907 - INFO - Extracted codebase before commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 16:51:09,869 - INFO - Getting files changed in commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 16:51:09,878 - DEBUG - Files changed in commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0: {'changelog/12008.bugfix.rst': {'insertions': 1, 'deletions': 0, 'lines': 1}, 'src/_pytest/python.py': {'insertions': 10, 'deletions': 0, 'lines': 10}, 'testing/example_scripts/issue_519.py': {'insertions': 2, 'deletions': 2, 'lines': 4}, 'testing/python/metafunc.py': {'insertions': 3, 'deletions': 3, 'lines': 6}}
+2024-11-11 16:51:09,878 - DEBUG - Written data for issue #12008 to data/issue_dataset.jsonl
+2024-11-11 16:51:09,878 - INFO - Processing issue #12009
+2024-11-11 16:51:09,878 - INFO - Searching for commits related to issue number: 12009
+2024-11-11 16:51:10,845 - INFO - Total commits found for issue #12009: 0
+2024-11-11 16:51:10,845 - WARNING - No commits found for issue #12009, skipping...
+2024-11-11 16:51:10,845 - INFO - Processing issue #12010
+2024-11-11 16:51:10,846 - INFO - Searching for commits related to issue number: 12010
+2024-11-11 16:51:11,789 - INFO - Total commits found for issue #12010: 0
+2024-11-11 16:51:11,789 - WARNING - No commits found for issue #12010, skipping...
+2024-11-11 16:51:11,789 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-11-11 16:51:11,789 - INFO - Issue Dataset Creation Script finished.
+2024-11-11 18:59:03,077 - INFO - Starting Issue Dataset Creation Script.
+2024-11-11 18:59:03,077 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-11 18:59:04,876 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-11 18:59:04,876 - INFO - Loading Sentence-BERT model for issue description embeddings...
+2024-11-11 18:59:10,079 - INFO - Sentence-BERT model loaded successfully.
+2024-11-11 18:59:10,079 - INFO - Attempting to get repository at path: pytest
+2024-11-11 18:59:10,101 - INFO - Successfully obtained repository: /home/hoka/code/compex/compex/pytest
+2024-11-11 18:59:10,101 - INFO - Creating dataset for issues: [12000, 12001, 12002, 12003, 12004, 12005, 12006, 12007, 12008, 12009, 12010]
+2024-11-11 18:59:10,101 - INFO - Processing issue #12000
+2024-11-11 18:59:10,101 - INFO - Searching for commits related to issue number: 12000
+2024-11-11 18:59:10,146 - DEBUG - Found commit related to issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 18:59:11,044 - INFO - Total commits found for issue #12000: 1
+2024-11-11 18:59:11,044 - INFO - Fetching description for issue #12000
+2024-11-11 18:59:12,031 - DEBUG - Issue #12000 description fetched successfully.
+2024-11-11 18:59:13,051 - INFO - First commit for issue #12000: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 18:59:13,051 - INFO - Extracting codebase before commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 18:59:13,111 - INFO - Extracted codebase before commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 18:59:15,233 - INFO - Getting files changed in commit: cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858
+2024-11-11 18:59:15,239 - DEBUG - Files changed in commit cefb3e2277b6ea24acc7b1088f80ef0f9e9f3858: {'doc/en/requirements.txt': {'insertions': 2, 'deletions': 1, 'lines': 3}}
+2024-11-11 18:59:15,239 - INFO - Calculating code metrics for issue #12000
+2024-11-11 18:59:20,661 - DEBUG - Written data for issue #12000 to data/issue_dataset.jsonl
+2024-11-11 18:59:20,662 - INFO - Processing issue #12001
+2024-11-11 18:59:20,662 - INFO - Searching for commits related to issue number: 12001
+2024-11-11 18:59:21,609 - INFO - Total commits found for issue #12001: 0
+2024-11-11 18:59:21,610 - WARNING - No commits found for issue #12001, skipping...
+2024-11-11 18:59:21,610 - INFO - Processing issue #12002
+2024-11-11 18:59:21,610 - INFO - Searching for commits related to issue number: 12002
+2024-11-11 18:59:21,653 - DEBUG - Found commit related to issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 18:59:22,551 - INFO - Total commits found for issue #12002: 1
+2024-11-11 18:59:22,551 - INFO - Fetching description for issue #12002
+2024-11-11 18:59:23,453 - DEBUG - Issue #12002 description fetched successfully.
+2024-11-11 18:59:23,469 - INFO - First commit for issue #12002: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 18:59:23,469 - INFO - Extracting codebase before commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 18:59:23,499 - INFO - Extracted codebase before commit 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 18:59:25,416 - INFO - Getting files changed in commit: 40011b838b67691c76302f3cd8d18862f37b9370
+2024-11-11 18:59:25,422 - DEBUG - Files changed in commit 40011b838b67691c76302f3cd8d18862f37b9370: {'doc/en/_templates/slim_searchbox.html': {'insertions': 2, 'deletions': 3, 'lines': 5}, 'doc/en/requirements.txt': {'insertions': 1, 'deletions': 2, 'lines': 3}}
+2024-11-11 18:59:25,422 - INFO - Calculating code metrics for issue #12002
+2024-11-11 18:59:30,797 - DEBUG - Written data for issue #12002 to data/issue_dataset.jsonl
+2024-11-11 18:59:30,797 - INFO - Processing issue #12003
+2024-11-11 18:59:30,798 - INFO - Searching for commits related to issue number: 12003
+2024-11-11 18:59:30,838 - DEBUG - Found commit related to issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 18:59:31,757 - INFO - Total commits found for issue #12003: 1
+2024-11-11 18:59:31,757 - INFO - Fetching description for issue #12003
+2024-11-11 18:59:32,853 - DEBUG - Issue #12003 description fetched successfully.
+2024-11-11 18:59:32,870 - INFO - First commit for issue #12003: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 18:59:32,870 - INFO - Extracting codebase before commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 18:59:32,916 - INFO - Extracted codebase before commit b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 18:59:34,917 - INFO - Getting files changed in commit: b37696703b356380339aadf9d4e4b80450fb394c
+2024-11-11 18:59:34,928 - DEBUG - Files changed in commit b37696703b356380339aadf9d4e4b80450fb394c: {'doc/en/reference/plugin_list.rst': {'insertions': 312, 'deletions': 96, 'lines': 408}}
+2024-11-11 18:59:34,928 - INFO - Calculating code metrics for issue #12003
+2024-11-11 18:59:40,234 - DEBUG - Written data for issue #12003 to data/issue_dataset.jsonl
+2024-11-11 18:59:40,234 - INFO - Processing issue #12004
+2024-11-11 18:59:40,234 - INFO - Searching for commits related to issue number: 12004
+2024-11-11 18:59:41,194 - INFO - Total commits found for issue #12004: 0
+2024-11-11 18:59:41,194 - WARNING - No commits found for issue #12004, skipping...
+2024-11-11 18:59:41,194 - INFO - Processing issue #12005
+2024-11-11 18:59:41,194 - INFO - Searching for commits related to issue number: 12005
+2024-11-11 18:59:42,144 - INFO - Total commits found for issue #12005: 0
+2024-11-11 18:59:42,144 - WARNING - No commits found for issue #12005, skipping...
+2024-11-11 18:59:42,144 - INFO - Processing issue #12006
+2024-11-11 18:59:42,144 - INFO - Searching for commits related to issue number: 12006
+2024-11-11 18:59:42,184 - DEBUG - Found commit related to issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:43,088 - INFO - Total commits found for issue #12006: 1
+2024-11-11 18:59:43,088 - INFO - Fetching description for issue #12006
+2024-11-11 18:59:44,030 - DEBUG - Issue #12006 description fetched successfully.
+2024-11-11 18:59:44,051 - INFO - First commit for issue #12006: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:44,051 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:44,080 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:45,959 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:45,964 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 18:59:45,965 - INFO - Calculating code metrics for issue #12006
+2024-11-11 18:59:51,355 - DEBUG - Written data for issue #12006 to data/issue_dataset.jsonl
+2024-11-11 18:59:51,355 - INFO - Processing issue #12007
+2024-11-11 18:59:51,355 - INFO - Searching for commits related to issue number: 12007
+2024-11-11 18:59:51,398 - DEBUG - Found commit related to issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:52,293 - INFO - Total commits found for issue #12007: 1
+2024-11-11 18:59:52,293 - INFO - Fetching description for issue #12007
+2024-11-11 18:59:53,237 - DEBUG - Issue #12007 description fetched successfully.
+2024-11-11 18:59:53,256 - INFO - First commit for issue #12007: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:53,256 - INFO - Extracting codebase before commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:53,285 - INFO - Extracted codebase before commit 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:55,179 - INFO - Getting files changed in commit: 998fee1679892f62cc9bd727e9e17911d746ed64
+2024-11-11 18:59:55,184 - DEBUG - Files changed in commit 998fee1679892f62cc9bd727e9e17911d746ed64: {'src/_pytest/config/__init__.py': {'insertions': 10, 'deletions': 7, 'lines': 17}}
+2024-11-11 18:59:55,185 - INFO - Calculating code metrics for issue #12007
+2024-11-11 19:00:00,566 - DEBUG - Written data for issue #12007 to data/issue_dataset.jsonl
+2024-11-11 19:00:00,566 - INFO - Processing issue #12008
+2024-11-11 19:00:00,566 - INFO - Searching for commits related to issue number: 12008
+2024-11-11 19:00:00,577 - DEBUG - Found commit related to issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 19:00:01,520 - INFO - Total commits found for issue #12008: 1
+2024-11-11 19:00:01,520 - INFO - Fetching description for issue #12008
+2024-11-11 19:00:02,522 - DEBUG - Issue #12008 description fetched successfully.
+2024-11-11 19:00:02,551 - INFO - First commit for issue #12008: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 19:00:02,551 - INFO - Extracting codebase before commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 19:00:02,586 - INFO - Extracted codebase before commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 19:00:04,601 - INFO - Getting files changed in commit: 6a3ac51ee2350d5072fdd082040e7cfa22331fc0
+2024-11-11 19:00:04,610 - DEBUG - Files changed in commit 6a3ac51ee2350d5072fdd082040e7cfa22331fc0: {'changelog/12008.bugfix.rst': {'insertions': 1, 'deletions': 0, 'lines': 1}, 'src/_pytest/python.py': {'insertions': 10, 'deletions': 0, 'lines': 10}, 'testing/example_scripts/issue_519.py': {'insertions': 2, 'deletions': 2, 'lines': 4}, 'testing/python/metafunc.py': {'insertions': 3, 'deletions': 3, 'lines': 6}}
+2024-11-11 19:00:04,610 - INFO - Calculating code metrics for issue #12008
+2024-11-11 19:00:09,979 - DEBUG - Written data for issue #12008 to data/issue_dataset.jsonl
+2024-11-11 19:00:09,979 - INFO - Processing issue #12009
+2024-11-11 19:00:09,979 - INFO - Searching for commits related to issue number: 12009
+2024-11-11 19:00:10,960 - INFO - Total commits found for issue #12009: 0
+2024-11-11 19:00:10,960 - WARNING - No commits found for issue #12009, skipping...
+2024-11-11 19:00:10,960 - INFO - Processing issue #12010
+2024-11-11 19:00:10,960 - INFO - Searching for commits related to issue number: 12010
+2024-11-11 19:00:11,896 - INFO - Total commits found for issue #12010: 0
+2024-11-11 19:00:11,896 - WARNING - No commits found for issue #12010, skipping...
+2024-11-11 19:00:11,896 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-11-11 19:00:11,897 - INFO - Issue Dataset Creation Script finished.
