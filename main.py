@@ -3,7 +3,7 @@ import sys
 
 from _logging import setup_logging
 from dataset import create_issue_dataset
-from embeddings import load_codebert_model, load_sentencebert_model
+from embeddings import load_codebert_model
 from gitcodes import get_repo
 from _globals import OWNER, REPO_NAME
 
@@ -94,14 +94,6 @@ def main():
         logger.error(f"Error loading CodeBERT model: {e}")
         sys.exit(1)
 
-    # Load Sentence-BERT model
-    logger.info("Loading Sentence-BERT model for issue description embeddings...")
-    try:
-        sentencebert_model = load_sentencebert_model(model_name=args.description_embedder, logger=logger)
-        logger.info("Sentence-BERT model loaded successfully.")
-    except Exception as e:
-        logger.error(f"Error loading Sentence-BERT model: {e}")
-        sys.exit(1)
 
     # Get Git repository
     repo = get_repo(args.repo_path, logger)
@@ -115,7 +107,6 @@ def main():
         issue_numbers=issue_numbers,
         tokenizer=tokenizer,
         model=model,
-        sentencebert_model=sentencebert_model,
         owner=args.owner,
         repo_name=args.repo,
         logger=logger,

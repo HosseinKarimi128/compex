@@ -593,3 +593,455 @@
 2024-11-11 19:00:11,896 - WARNING - No commits found for issue #12010, skipping...
 2024-11-11 19:00:11,896 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
 2024-11-11 19:00:11,897 - INFO - Issue Dataset Creation Script finished.
+2024-11-30 18:32:53,927 - INFO - Starting Issue Dataset Creation Script.
+2024-11-30 18:32:53,927 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-30 18:35:23,664 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-30 18:35:23,665 - INFO - Loading Sentence-BERT model for issue description embeddings...
+2024-11-30 18:35:23,665 - ERROR - Error loading Sentence-BERT model: name 'load_sentencebert_model' is not defined
+2024-11-30 18:36:26,806 - INFO - Starting Issue Dataset Creation Script.
+2024-11-30 18:36:26,806 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-30 18:36:32,068 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-30 18:36:32,069 - INFO - Attempting to get repository at path: pytest
+2024-11-30 18:36:32,080 - ERROR - Invalid Git repository at path: pytest
+2024-11-30 18:36:53,457 - INFO - Starting Issue Dataset Creation Script.
+2024-11-30 18:36:53,458 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-30 18:36:58,295 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-30 18:36:58,296 - INFO - Attempting to get repository at path: pytest
+2024-11-30 18:36:58,300 - ERROR - Invalid Git repository at path: pytest
+2024-11-30 18:37:14,939 - INFO - Starting Issue Dataset Creation Script.
+2024-11-30 18:37:14,940 - INFO - Loading CodeBERT model and tokenizer...
+2024-11-30 18:37:20,326 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-11-30 18:37:20,326 - INFO - Attempting to get repository at path: pytest.git
+2024-11-30 18:37:20,330 - ERROR - Unexpected error accessing repository: /home/amir/Desktop/Work/Compex/pytest.git
+2024-12-02 12:22:23,803 - INFO - Starting Issue Dataset Creation Script.
+2024-12-02 12:22:23,804 - INFO - Loading CodeBERT model and tokenizer...
+2024-12-02 12:22:33,186 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-12-02 12:22:33,186 - INFO - Attempting to get repository at path: pytest-dev
+2024-12-02 12:22:33,188 - ERROR - Unexpected error accessing repository: /home/amir/Desktop/Work/Compex/pytest-dev
+2024-12-02 12:24:03,093 - INFO - Starting Issue Dataset Creation Script.
+2024-12-02 12:24:03,093 - INFO - Loading CodeBERT model and tokenizer...
+2024-12-02 12:24:08,425 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-12-02 12:24:08,425 - INFO - Attempting to get repository at path: https://github.com/pytest-dev/pytest.git
+2024-12-02 12:24:08,427 - ERROR - Unexpected error accessing repository: /home/amir/Desktop/Work/Compex/https:/github.com/pytest-dev/pytest.git
+2024-12-02 12:25:39,196 - INFO - Starting Issue Dataset Creation Script.
+2024-12-02 12:25:39,196 - INFO - Loading CodeBERT model and tokenizer...
+2024-12-02 12:25:42,426 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-12-02 12:25:42,426 - INFO - Attempting to get repository at path: https://github.com/pytest-dev/pytest.git
+2024-12-02 12:25:42,429 - ERROR - Unexpected error accessing repository: /home/amir/Desktop/Work/Compex/https:/github.com/pytest-dev/pytest.git
+2024-12-02 12:29:48,901 - INFO - Starting Issue Dataset Creation Script.
+2024-12-02 12:29:48,903 - INFO - Loading CodeBERT model and tokenizer...
+2024-12-02 12:29:55,564 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-12-02 12:29:55,565 - INFO - Attempting to get repository at path: _globals.py
+2024-12-02 12:29:55,569 - ERROR - Invalid Git repository at path: _globals.py
+2024-12-02 12:36:42,088 - INFO - Starting Issue Dataset Creation Script.
+2024-12-02 12:36:42,088 - INFO - Loading CodeBERT model and tokenizer...
+2024-12-02 12:36:50,661 - INFO - CodeBERT model and tokenizer loaded successfully.
+2024-12-02 12:36:50,662 - INFO - Attempting to get repository at path: .
+2024-12-02 12:36:50,673 - INFO - Successfully obtained repository: /home/amir/Desktop/Work/Compex
+2024-12-02 12:36:50,673 - INFO - Creating dataset for issues: [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081, 1082, 1083, 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100]
+2024-12-02 12:36:50,675 - INFO - Processing issue #1000
+2024-12-02 12:36:50,675 - INFO - Searching for commits related to issue number: 1000
+2024-12-02 12:36:50,686 - INFO - Total commits found for issue #1000: 0
+2024-12-02 12:36:50,686 - WARNING - No commits found for issue #1000, skipping...
+2024-12-02 12:36:50,686 - INFO - Processing issue #1001
+2024-12-02 12:36:50,686 - INFO - Searching for commits related to issue number: 1001
+2024-12-02 12:36:50,690 - INFO - Total commits found for issue #1001: 0
+2024-12-02 12:36:50,690 - WARNING - No commits found for issue #1001, skipping...
+2024-12-02 12:36:50,690 - INFO - Processing issue #1002
+2024-12-02 12:36:50,690 - INFO - Searching for commits related to issue number: 1002
+2024-12-02 12:36:50,694 - INFO - Total commits found for issue #1002: 0
+2024-12-02 12:36:50,695 - WARNING - No commits found for issue #1002, skipping...
+2024-12-02 12:36:50,695 - INFO - Processing issue #1003
+2024-12-02 12:36:50,695 - INFO - Searching for commits related to issue number: 1003
+2024-12-02 12:36:50,699 - INFO - Total commits found for issue #1003: 0
+2024-12-02 12:36:50,700 - WARNING - No commits found for issue #1003, skipping...
+2024-12-02 12:36:50,700 - INFO - Processing issue #1004
+2024-12-02 12:36:50,700 - INFO - Searching for commits related to issue number: 1004
+2024-12-02 12:36:50,704 - INFO - Total commits found for issue #1004: 0
+2024-12-02 12:36:50,705 - WARNING - No commits found for issue #1004, skipping...
+2024-12-02 12:36:50,705 - INFO - Processing issue #1005
+2024-12-02 12:36:50,705 - INFO - Searching for commits related to issue number: 1005
+2024-12-02 12:36:50,710 - INFO - Total commits found for issue #1005: 0
+2024-12-02 12:36:50,710 - WARNING - No commits found for issue #1005, skipping...
+2024-12-02 12:36:50,710 - INFO - Processing issue #1006
+2024-12-02 12:36:50,710 - INFO - Searching for commits related to issue number: 1006
+2024-12-02 12:36:50,716 - INFO - Total commits found for issue #1006: 0
+2024-12-02 12:36:50,716 - WARNING - No commits found for issue #1006, skipping...
+2024-12-02 12:36:50,716 - INFO - Processing issue #1007
+2024-12-02 12:36:50,717 - INFO - Searching for commits related to issue number: 1007
+2024-12-02 12:36:50,722 - INFO - Total commits found for issue #1007: 0
+2024-12-02 12:36:50,722 - WARNING - No commits found for issue #1007, skipping...
+2024-12-02 12:36:50,722 - INFO - Processing issue #1008
+2024-12-02 12:36:50,722 - INFO - Searching for commits related to issue number: 1008
+2024-12-02 12:36:50,727 - INFO - Total commits found for issue #1008: 0
+2024-12-02 12:36:50,727 - WARNING - No commits found for issue #1008, skipping...
+2024-12-02 12:36:50,727 - INFO - Processing issue #1009
+2024-12-02 12:36:50,727 - INFO - Searching for commits related to issue number: 1009
+2024-12-02 12:36:50,732 - INFO - Total commits found for issue #1009: 0
+2024-12-02 12:36:50,732 - WARNING - No commits found for issue #1009, skipping...
+2024-12-02 12:36:50,732 - INFO - Processing issue #1010
+2024-12-02 12:36:50,733 - INFO - Searching for commits related to issue number: 1010
+2024-12-02 12:36:50,737 - INFO - Total commits found for issue #1010: 0
+2024-12-02 12:36:50,737 - WARNING - No commits found for issue #1010, skipping...
+2024-12-02 12:36:50,737 - INFO - Processing issue #1011
+2024-12-02 12:36:50,737 - INFO - Searching for commits related to issue number: 1011
+2024-12-02 12:36:50,741 - INFO - Total commits found for issue #1011: 0
+2024-12-02 12:36:50,742 - WARNING - No commits found for issue #1011, skipping...
+2024-12-02 12:36:50,742 - INFO - Processing issue #1012
+2024-12-02 12:36:50,742 - INFO - Searching for commits related to issue number: 1012
+2024-12-02 12:36:50,746 - INFO - Total commits found for issue #1012: 0
+2024-12-02 12:36:50,747 - WARNING - No commits found for issue #1012, skipping...
+2024-12-02 12:36:50,747 - INFO - Processing issue #1013
+2024-12-02 12:36:50,747 - INFO - Searching for commits related to issue number: 1013
+2024-12-02 12:36:50,751 - INFO - Total commits found for issue #1013: 0
+2024-12-02 12:36:50,751 - WARNING - No commits found for issue #1013, skipping...
+2024-12-02 12:36:50,751 - INFO - Processing issue #1014
+2024-12-02 12:36:50,752 - INFO - Searching for commits related to issue number: 1014
+2024-12-02 12:36:50,755 - INFO - Total commits found for issue #1014: 0
+2024-12-02 12:36:50,755 - WARNING - No commits found for issue #1014, skipping...
+2024-12-02 12:36:50,755 - INFO - Processing issue #1015
+2024-12-02 12:36:50,755 - INFO - Searching for commits related to issue number: 1015
+2024-12-02 12:36:50,759 - INFO - Total commits found for issue #1015: 0
+2024-12-02 12:36:50,760 - WARNING - No commits found for issue #1015, skipping...
+2024-12-02 12:36:50,760 - INFO - Processing issue #1016
+2024-12-02 12:36:50,760 - INFO - Searching for commits related to issue number: 1016
+2024-12-02 12:36:50,765 - INFO - Total commits found for issue #1016: 0
+2024-12-02 12:36:50,765 - WARNING - No commits found for issue #1016, skipping...
+2024-12-02 12:36:50,765 - INFO - Processing issue #1017
+2024-12-02 12:36:50,765 - INFO - Searching for commits related to issue number: 1017
+2024-12-02 12:36:50,770 - INFO - Total commits found for issue #1017: 0
+2024-12-02 12:36:50,771 - WARNING - No commits found for issue #1017, skipping...
+2024-12-02 12:36:50,771 - INFO - Processing issue #1018
+2024-12-02 12:36:50,771 - INFO - Searching for commits related to issue number: 1018
+2024-12-02 12:36:50,776 - INFO - Total commits found for issue #1018: 0
+2024-12-02 12:36:50,777 - WARNING - No commits found for issue #1018, skipping...
+2024-12-02 12:36:50,778 - INFO - Processing issue #1019
+2024-12-02 12:36:50,780 - INFO - Searching for commits related to issue number: 1019
+2024-12-02 12:36:50,785 - INFO - Total commits found for issue #1019: 0
+2024-12-02 12:36:50,785 - WARNING - No commits found for issue #1019, skipping...
+2024-12-02 12:36:50,785 - INFO - Processing issue #1020
+2024-12-02 12:36:50,786 - INFO - Searching for commits related to issue number: 1020
+2024-12-02 12:36:50,791 - INFO - Total commits found for issue #1020: 0
+2024-12-02 12:36:50,791 - WARNING - No commits found for issue #1020, skipping...
+2024-12-02 12:36:50,792 - INFO - Processing issue #1021
+2024-12-02 12:36:50,792 - INFO - Searching for commits related to issue number: 1021
+2024-12-02 12:36:50,797 - INFO - Total commits found for issue #1021: 0
+2024-12-02 12:36:50,798 - WARNING - No commits found for issue #1021, skipping...
+2024-12-02 12:36:50,798 - INFO - Processing issue #1022
+2024-12-02 12:36:50,798 - INFO - Searching for commits related to issue number: 1022
+2024-12-02 12:36:50,804 - INFO - Total commits found for issue #1022: 0
+2024-12-02 12:36:50,804 - WARNING - No commits found for issue #1022, skipping...
+2024-12-02 12:36:50,805 - INFO - Processing issue #1023
+2024-12-02 12:36:50,805 - INFO - Searching for commits related to issue number: 1023
+2024-12-02 12:36:50,811 - INFO - Total commits found for issue #1023: 0
+2024-12-02 12:36:50,811 - WARNING - No commits found for issue #1023, skipping...
+2024-12-02 12:36:50,812 - INFO - Processing issue #1024
+2024-12-02 12:36:50,812 - INFO - Searching for commits related to issue number: 1024
+2024-12-02 12:36:50,818 - INFO - Total commits found for issue #1024: 0
+2024-12-02 12:36:50,818 - WARNING - No commits found for issue #1024, skipping...
+2024-12-02 12:36:50,818 - INFO - Processing issue #1025
+2024-12-02 12:36:50,819 - INFO - Searching for commits related to issue number: 1025
+2024-12-02 12:36:50,824 - INFO - Total commits found for issue #1025: 0
+2024-12-02 12:36:50,824 - WARNING - No commits found for issue #1025, skipping...
+2024-12-02 12:36:50,824 - INFO - Processing issue #1026
+2024-12-02 12:36:50,825 - INFO - Searching for commits related to issue number: 1026
+2024-12-02 12:36:50,830 - INFO - Total commits found for issue #1026: 0
+2024-12-02 12:36:50,830 - WARNING - No commits found for issue #1026, skipping...
+2024-12-02 12:36:50,831 - INFO - Processing issue #1027
+2024-12-02 12:36:50,831 - INFO - Searching for commits related to issue number: 1027
+2024-12-02 12:36:50,849 - INFO - Total commits found for issue #1027: 0
+2024-12-02 12:36:50,853 - WARNING - No commits found for issue #1027, skipping...
+2024-12-02 12:36:50,855 - INFO - Processing issue #1028
+2024-12-02 12:36:50,856 - INFO - Searching for commits related to issue number: 1028
+2024-12-02 12:36:50,866 - INFO - Total commits found for issue #1028: 0
+2024-12-02 12:36:50,867 - WARNING - No commits found for issue #1028, skipping...
+2024-12-02 12:36:50,867 - INFO - Processing issue #1029
+2024-12-02 12:36:50,868 - INFO - Searching for commits related to issue number: 1029
+2024-12-02 12:36:50,890 - INFO - Total commits found for issue #1029: 0
+2024-12-02 12:36:50,890 - WARNING - No commits found for issue #1029, skipping...
+2024-12-02 12:36:50,891 - INFO - Processing issue #1030
+2024-12-02 12:36:50,891 - INFO - Searching for commits related to issue number: 1030
+2024-12-02 12:36:50,905 - INFO - Total commits found for issue #1030: 0
+2024-12-02 12:36:50,906 - WARNING - No commits found for issue #1030, skipping...
+2024-12-02 12:36:50,906 - INFO - Processing issue #1031
+2024-12-02 12:36:50,906 - INFO - Searching for commits related to issue number: 1031
+2024-12-02 12:36:50,920 - INFO - Total commits found for issue #1031: 0
+2024-12-02 12:36:50,920 - WARNING - No commits found for issue #1031, skipping...
+2024-12-02 12:36:50,920 - INFO - Processing issue #1032
+2024-12-02 12:36:50,920 - INFO - Searching for commits related to issue number: 1032
+2024-12-02 12:36:50,939 - INFO - Total commits found for issue #1032: 0
+2024-12-02 12:36:50,939 - WARNING - No commits found for issue #1032, skipping...
+2024-12-02 12:36:50,939 - INFO - Processing issue #1033
+2024-12-02 12:36:50,939 - INFO - Searching for commits related to issue number: 1033
+2024-12-02 12:36:50,950 - INFO - Total commits found for issue #1033: 0
+2024-12-02 12:36:50,950 - WARNING - No commits found for issue #1033, skipping...
+2024-12-02 12:36:50,950 - INFO - Processing issue #1034
+2024-12-02 12:36:50,950 - INFO - Searching for commits related to issue number: 1034
+2024-12-02 12:36:50,956 - INFO - Total commits found for issue #1034: 0
+2024-12-02 12:36:50,957 - WARNING - No commits found for issue #1034, skipping...
+2024-12-02 12:36:50,957 - INFO - Processing issue #1035
+2024-12-02 12:36:50,958 - INFO - Searching for commits related to issue number: 1035
+2024-12-02 12:36:50,963 - INFO - Total commits found for issue #1035: 0
+2024-12-02 12:36:50,964 - WARNING - No commits found for issue #1035, skipping...
+2024-12-02 12:36:50,967 - INFO - Processing issue #1036
+2024-12-02 12:36:50,968 - INFO - Searching for commits related to issue number: 1036
+2024-12-02 12:36:50,974 - INFO - Total commits found for issue #1036: 0
+2024-12-02 12:36:50,975 - WARNING - No commits found for issue #1036, skipping...
+2024-12-02 12:36:50,975 - INFO - Processing issue #1037
+2024-12-02 12:36:50,976 - INFO - Searching for commits related to issue number: 1037
+2024-12-02 12:36:50,982 - INFO - Total commits found for issue #1037: 0
+2024-12-02 12:36:50,983 - WARNING - No commits found for issue #1037, skipping...
+2024-12-02 12:36:50,983 - INFO - Processing issue #1038
+2024-12-02 12:36:50,983 - INFO - Searching for commits related to issue number: 1038
+2024-12-02 12:36:50,990 - INFO - Total commits found for issue #1038: 0
+2024-12-02 12:36:50,990 - WARNING - No commits found for issue #1038, skipping...
+2024-12-02 12:36:50,991 - INFO - Processing issue #1039
+2024-12-02 12:36:50,991 - INFO - Searching for commits related to issue number: 1039
+2024-12-02 12:36:51,001 - INFO - Total commits found for issue #1039: 0
+2024-12-02 12:36:51,002 - WARNING - No commits found for issue #1039, skipping...
+2024-12-02 12:36:51,002 - INFO - Processing issue #1040
+2024-12-02 12:36:51,002 - INFO - Searching for commits related to issue number: 1040
+2024-12-02 12:36:51,010 - INFO - Total commits found for issue #1040: 0
+2024-12-02 12:36:51,011 - WARNING - No commits found for issue #1040, skipping...
+2024-12-02 12:36:51,011 - INFO - Processing issue #1041
+2024-12-02 12:36:51,012 - INFO - Searching for commits related to issue number: 1041
+2024-12-02 12:36:51,021 - INFO - Total commits found for issue #1041: 0
+2024-12-02 12:36:51,021 - WARNING - No commits found for issue #1041, skipping...
+2024-12-02 12:36:51,021 - INFO - Processing issue #1042
+2024-12-02 12:36:51,021 - INFO - Searching for commits related to issue number: 1042
+2024-12-02 12:36:51,031 - INFO - Total commits found for issue #1042: 0
+2024-12-02 12:36:51,032 - WARNING - No commits found for issue #1042, skipping...
+2024-12-02 12:36:51,032 - INFO - Processing issue #1043
+2024-12-02 12:36:51,032 - INFO - Searching for commits related to issue number: 1043
+2024-12-02 12:36:51,040 - INFO - Total commits found for issue #1043: 0
+2024-12-02 12:36:51,040 - WARNING - No commits found for issue #1043, skipping...
+2024-12-02 12:36:51,040 - INFO - Processing issue #1044
+2024-12-02 12:36:51,041 - INFO - Searching for commits related to issue number: 1044
+2024-12-02 12:36:51,046 - INFO - Total commits found for issue #1044: 0
+2024-12-02 12:36:51,047 - WARNING - No commits found for issue #1044, skipping...
+2024-12-02 12:36:51,047 - INFO - Processing issue #1045
+2024-12-02 12:36:51,048 - INFO - Searching for commits related to issue number: 1045
+2024-12-02 12:36:51,053 - INFO - Total commits found for issue #1045: 0
+2024-12-02 12:36:51,053 - WARNING - No commits found for issue #1045, skipping...
+2024-12-02 12:36:51,053 - INFO - Processing issue #1046
+2024-12-02 12:36:51,053 - INFO - Searching for commits related to issue number: 1046
+2024-12-02 12:36:51,057 - INFO - Total commits found for issue #1046: 0
+2024-12-02 12:36:51,058 - WARNING - No commits found for issue #1046, skipping...
+2024-12-02 12:36:51,058 - INFO - Processing issue #1047
+2024-12-02 12:36:51,058 - INFO - Searching for commits related to issue number: 1047
+2024-12-02 12:36:51,063 - INFO - Total commits found for issue #1047: 0
+2024-12-02 12:36:51,064 - WARNING - No commits found for issue #1047, skipping...
+2024-12-02 12:36:51,064 - INFO - Processing issue #1048
+2024-12-02 12:36:51,065 - INFO - Searching for commits related to issue number: 1048
+2024-12-02 12:36:51,069 - INFO - Total commits found for issue #1048: 0
+2024-12-02 12:36:51,069 - WARNING - No commits found for issue #1048, skipping...
+2024-12-02 12:36:51,069 - INFO - Processing issue #1049
+2024-12-02 12:36:51,069 - INFO - Searching for commits related to issue number: 1049
+2024-12-02 12:36:51,073 - INFO - Total commits found for issue #1049: 0
+2024-12-02 12:36:51,073 - WARNING - No commits found for issue #1049, skipping...
+2024-12-02 12:36:51,073 - INFO - Processing issue #1050
+2024-12-02 12:36:51,074 - INFO - Searching for commits related to issue number: 1050
+2024-12-02 12:36:51,080 - INFO - Total commits found for issue #1050: 0
+2024-12-02 12:36:51,080 - WARNING - No commits found for issue #1050, skipping...
+2024-12-02 12:36:51,080 - INFO - Processing issue #1051
+2024-12-02 12:36:51,081 - INFO - Searching for commits related to issue number: 1051
+2024-12-02 12:36:51,085 - INFO - Total commits found for issue #1051: 0
+2024-12-02 12:36:51,085 - WARNING - No commits found for issue #1051, skipping...
+2024-12-02 12:36:51,085 - INFO - Processing issue #1052
+2024-12-02 12:36:51,086 - INFO - Searching for commits related to issue number: 1052
+2024-12-02 12:36:51,089 - INFO - Total commits found for issue #1052: 0
+2024-12-02 12:36:51,090 - WARNING - No commits found for issue #1052, skipping...
+2024-12-02 12:36:51,090 - INFO - Processing issue #1053
+2024-12-02 12:36:51,090 - INFO - Searching for commits related to issue number: 1053
+2024-12-02 12:36:51,095 - INFO - Total commits found for issue #1053: 0
+2024-12-02 12:36:51,096 - WARNING - No commits found for issue #1053, skipping...
+2024-12-02 12:36:51,096 - INFO - Processing issue #1054
+2024-12-02 12:36:51,096 - INFO - Searching for commits related to issue number: 1054
+2024-12-02 12:36:51,100 - INFO - Total commits found for issue #1054: 0
+2024-12-02 12:36:51,100 - WARNING - No commits found for issue #1054, skipping...
+2024-12-02 12:36:51,101 - INFO - Processing issue #1055
+2024-12-02 12:36:51,101 - INFO - Searching for commits related to issue number: 1055
+2024-12-02 12:36:51,104 - INFO - Total commits found for issue #1055: 0
+2024-12-02 12:36:51,104 - WARNING - No commits found for issue #1055, skipping...
+2024-12-02 12:36:51,105 - INFO - Processing issue #1056
+2024-12-02 12:36:51,105 - INFO - Searching for commits related to issue number: 1056
+2024-12-02 12:36:51,108 - INFO - Total commits found for issue #1056: 0
+2024-12-02 12:36:51,109 - WARNING - No commits found for issue #1056, skipping...
+2024-12-02 12:36:51,109 - INFO - Processing issue #1057
+2024-12-02 12:36:51,109 - INFO - Searching for commits related to issue number: 1057
+2024-12-02 12:36:51,114 - INFO - Total commits found for issue #1057: 0
+2024-12-02 12:36:51,114 - WARNING - No commits found for issue #1057, skipping...
+2024-12-02 12:36:51,115 - INFO - Processing issue #1058
+2024-12-02 12:36:51,115 - INFO - Searching for commits related to issue number: 1058
+2024-12-02 12:36:51,118 - INFO - Total commits found for issue #1058: 0
+2024-12-02 12:36:51,118 - WARNING - No commits found for issue #1058, skipping...
+2024-12-02 12:36:51,118 - INFO - Processing issue #1059
+2024-12-02 12:36:51,118 - INFO - Searching for commits related to issue number: 1059
+2024-12-02 12:36:51,122 - INFO - Total commits found for issue #1059: 0
+2024-12-02 12:36:51,122 - WARNING - No commits found for issue #1059, skipping...
+2024-12-02 12:36:51,122 - INFO - Processing issue #1060
+2024-12-02 12:36:51,122 - INFO - Searching for commits related to issue number: 1060
+2024-12-02 12:36:51,126 - INFO - Total commits found for issue #1060: 0
+2024-12-02 12:36:51,126 - WARNING - No commits found for issue #1060, skipping...
+2024-12-02 12:36:51,127 - INFO - Processing issue #1061
+2024-12-02 12:36:51,127 - INFO - Searching for commits related to issue number: 1061
+2024-12-02 12:36:51,131 - INFO - Total commits found for issue #1061: 0
+2024-12-02 12:36:51,131 - WARNING - No commits found for issue #1061, skipping...
+2024-12-02 12:36:51,131 - INFO - Processing issue #1062
+2024-12-02 12:36:51,131 - INFO - Searching for commits related to issue number: 1062
+2024-12-02 12:36:51,135 - INFO - Total commits found for issue #1062: 0
+2024-12-02 12:36:51,135 - WARNING - No commits found for issue #1062, skipping...
+2024-12-02 12:36:51,135 - INFO - Processing issue #1063
+2024-12-02 12:36:51,136 - INFO - Searching for commits related to issue number: 1063
+2024-12-02 12:36:51,139 - INFO - Total commits found for issue #1063: 0
+2024-12-02 12:36:51,139 - WARNING - No commits found for issue #1063, skipping...
+2024-12-02 12:36:51,139 - INFO - Processing issue #1064
+2024-12-02 12:36:51,139 - INFO - Searching for commits related to issue number: 1064
+2024-12-02 12:36:51,144 - INFO - Total commits found for issue #1064: 0
+2024-12-02 12:36:51,145 - WARNING - No commits found for issue #1064, skipping...
+2024-12-02 12:36:51,145 - INFO - Processing issue #1065
+2024-12-02 12:36:51,145 - INFO - Searching for commits related to issue number: 1065
+2024-12-02 12:36:51,149 - INFO - Total commits found for issue #1065: 0
+2024-12-02 12:36:51,150 - WARNING - No commits found for issue #1065, skipping...
+2024-12-02 12:36:51,150 - INFO - Processing issue #1066
+2024-12-02 12:36:51,150 - INFO - Searching for commits related to issue number: 1066
+2024-12-02 12:36:51,153 - INFO - Total commits found for issue #1066: 0
+2024-12-02 12:36:51,154 - WARNING - No commits found for issue #1066, skipping...
+2024-12-02 12:36:51,154 - INFO - Processing issue #1067
+2024-12-02 12:36:51,154 - INFO - Searching for commits related to issue number: 1067
+2024-12-02 12:36:51,158 - INFO - Total commits found for issue #1067: 0
+2024-12-02 12:36:51,158 - WARNING - No commits found for issue #1067, skipping...
+2024-12-02 12:36:51,158 - INFO - Processing issue #1068
+2024-12-02 12:36:51,158 - INFO - Searching for commits related to issue number: 1068
+2024-12-02 12:36:51,163 - INFO - Total commits found for issue #1068: 0
+2024-12-02 12:36:51,163 - WARNING - No commits found for issue #1068, skipping...
+2024-12-02 12:36:51,164 - INFO - Processing issue #1069
+2024-12-02 12:36:51,164 - INFO - Searching for commits related to issue number: 1069
+2024-12-02 12:36:51,167 - INFO - Total commits found for issue #1069: 0
+2024-12-02 12:36:51,168 - WARNING - No commits found for issue #1069, skipping...
+2024-12-02 12:36:51,168 - INFO - Processing issue #1070
+2024-12-02 12:36:51,168 - INFO - Searching for commits related to issue number: 1070
+2024-12-02 12:36:51,172 - INFO - Total commits found for issue #1070: 0
+2024-12-02 12:36:51,172 - WARNING - No commits found for issue #1070, skipping...
+2024-12-02 12:36:51,172 - INFO - Processing issue #1071
+2024-12-02 12:36:51,172 - INFO - Searching for commits related to issue number: 1071
+2024-12-02 12:36:51,176 - INFO - Total commits found for issue #1071: 0
+2024-12-02 12:36:51,176 - WARNING - No commits found for issue #1071, skipping...
+2024-12-02 12:36:51,176 - INFO - Processing issue #1072
+2024-12-02 12:36:51,176 - INFO - Searching for commits related to issue number: 1072
+2024-12-02 12:36:51,181 - INFO - Total commits found for issue #1072: 0
+2024-12-02 12:36:51,181 - WARNING - No commits found for issue #1072, skipping...
+2024-12-02 12:36:51,182 - INFO - Processing issue #1073
+2024-12-02 12:36:51,182 - INFO - Searching for commits related to issue number: 1073
+2024-12-02 12:36:51,185 - INFO - Total commits found for issue #1073: 0
+2024-12-02 12:36:51,185 - WARNING - No commits found for issue #1073, skipping...
+2024-12-02 12:36:51,185 - INFO - Processing issue #1074
+2024-12-02 12:36:51,186 - INFO - Searching for commits related to issue number: 1074
+2024-12-02 12:36:51,189 - INFO - Total commits found for issue #1074: 0
+2024-12-02 12:36:51,189 - WARNING - No commits found for issue #1074, skipping...
+2024-12-02 12:36:51,190 - INFO - Processing issue #1075
+2024-12-02 12:36:51,190 - INFO - Searching for commits related to issue number: 1075
+2024-12-02 12:36:51,195 - INFO - Total commits found for issue #1075: 0
+2024-12-02 12:36:51,195 - WARNING - No commits found for issue #1075, skipping...
+2024-12-02 12:36:51,195 - INFO - Processing issue #1076
+2024-12-02 12:36:51,195 - INFO - Searching for commits related to issue number: 1076
+2024-12-02 12:36:51,200 - INFO - Total commits found for issue #1076: 0
+2024-12-02 12:36:51,200 - WARNING - No commits found for issue #1076, skipping...
+2024-12-02 12:36:51,200 - INFO - Processing issue #1077
+2024-12-02 12:36:51,201 - INFO - Searching for commits related to issue number: 1077
+2024-12-02 12:36:51,204 - INFO - Total commits found for issue #1077: 0
+2024-12-02 12:36:51,204 - WARNING - No commits found for issue #1077, skipping...
+2024-12-02 12:36:51,204 - INFO - Processing issue #1078
+2024-12-02 12:36:51,205 - INFO - Searching for commits related to issue number: 1078
+2024-12-02 12:36:51,208 - INFO - Total commits found for issue #1078: 0
+2024-12-02 12:36:51,208 - WARNING - No commits found for issue #1078, skipping...
+2024-12-02 12:36:51,208 - INFO - Processing issue #1079
+2024-12-02 12:36:51,208 - INFO - Searching for commits related to issue number: 1079
+2024-12-02 12:36:51,213 - INFO - Total commits found for issue #1079: 0
+2024-12-02 12:36:51,213 - WARNING - No commits found for issue #1079, skipping...
+2024-12-02 12:36:51,213 - INFO - Processing issue #1080
+2024-12-02 12:36:51,213 - INFO - Searching for commits related to issue number: 1080
+2024-12-02 12:36:51,218 - INFO - Total commits found for issue #1080: 0
+2024-12-02 12:36:51,218 - WARNING - No commits found for issue #1080, skipping...
+2024-12-02 12:36:51,218 - INFO - Processing issue #1081
+2024-12-02 12:36:51,218 - INFO - Searching for commits related to issue number: 1081
+2024-12-02 12:36:51,222 - INFO - Total commits found for issue #1081: 0
+2024-12-02 12:36:51,222 - WARNING - No commits found for issue #1081, skipping...
+2024-12-02 12:36:51,223 - INFO - Processing issue #1082
+2024-12-02 12:36:51,223 - INFO - Searching for commits related to issue number: 1082
+2024-12-02 12:36:51,227 - INFO - Total commits found for issue #1082: 0
+2024-12-02 12:36:51,227 - WARNING - No commits found for issue #1082, skipping...
+2024-12-02 12:36:51,227 - INFO - Processing issue #1083
+2024-12-02 12:36:51,228 - INFO - Searching for commits related to issue number: 1083
+2024-12-02 12:36:51,237 - INFO - Total commits found for issue #1083: 0
+2024-12-02 12:36:51,237 - WARNING - No commits found for issue #1083, skipping...
+2024-12-02 12:36:51,237 - INFO - Processing issue #1084
+2024-12-02 12:36:51,237 - INFO - Searching for commits related to issue number: 1084
+2024-12-02 12:36:51,246 - INFO - Total commits found for issue #1084: 0
+2024-12-02 12:36:51,246 - WARNING - No commits found for issue #1084, skipping...
+2024-12-02 12:36:51,247 - INFO - Processing issue #1085
+2024-12-02 12:36:51,247 - INFO - Searching for commits related to issue number: 1085
+2024-12-02 12:36:51,253 - INFO - Total commits found for issue #1085: 0
+2024-12-02 12:36:51,253 - WARNING - No commits found for issue #1085, skipping...
+2024-12-02 12:36:51,253 - INFO - Processing issue #1086
+2024-12-02 12:36:51,253 - INFO - Searching for commits related to issue number: 1086
+2024-12-02 12:36:51,260 - INFO - Total commits found for issue #1086: 0
+2024-12-02 12:36:51,260 - WARNING - No commits found for issue #1086, skipping...
+2024-12-02 12:36:51,260 - INFO - Processing issue #1087
+2024-12-02 12:36:51,260 - INFO - Searching for commits related to issue number: 1087
+2024-12-02 12:36:51,268 - INFO - Total commits found for issue #1087: 0
+2024-12-02 12:36:51,268 - WARNING - No commits found for issue #1087, skipping...
+2024-12-02 12:36:51,269 - INFO - Processing issue #1088
+2024-12-02 12:36:51,269 - INFO - Searching for commits related to issue number: 1088
+2024-12-02 12:36:51,275 - INFO - Total commits found for issue #1088: 0
+2024-12-02 12:36:51,275 - WARNING - No commits found for issue #1088, skipping...
+2024-12-02 12:36:51,277 - INFO - Processing issue #1089
+2024-12-02 12:36:51,278 - INFO - Searching for commits related to issue number: 1089
+2024-12-02 12:36:51,284 - INFO - Total commits found for issue #1089: 0
+2024-12-02 12:36:51,284 - WARNING - No commits found for issue #1089, skipping...
+2024-12-02 12:36:51,285 - INFO - Processing issue #1090
+2024-12-02 12:36:51,285 - INFO - Searching for commits related to issue number: 1090
+2024-12-02 12:36:51,291 - INFO - Total commits found for issue #1090: 0
+2024-12-02 12:36:51,292 - WARNING - No commits found for issue #1090, skipping...
+2024-12-02 12:36:51,292 - INFO - Processing issue #1091
+2024-12-02 12:36:51,292 - INFO - Searching for commits related to issue number: 1091
+2024-12-02 12:36:51,299 - INFO - Total commits found for issue #1091: 0
+2024-12-02 12:36:51,301 - WARNING - No commits found for issue #1091, skipping...
+2024-12-02 12:36:51,302 - INFO - Processing issue #1092
+2024-12-02 12:36:51,302 - INFO - Searching for commits related to issue number: 1092
+2024-12-02 12:36:51,311 - INFO - Total commits found for issue #1092: 0
+2024-12-02 12:36:51,311 - WARNING - No commits found for issue #1092, skipping...
+2024-12-02 12:36:51,311 - INFO - Processing issue #1093
+2024-12-02 12:36:51,311 - INFO - Searching for commits related to issue number: 1093
+2024-12-02 12:36:51,319 - INFO - Total commits found for issue #1093: 0
+2024-12-02 12:36:51,319 - WARNING - No commits found for issue #1093, skipping...
+2024-12-02 12:36:51,320 - INFO - Processing issue #1094
+2024-12-02 12:36:51,320 - INFO - Searching for commits related to issue number: 1094
+2024-12-02 12:36:51,330 - INFO - Total commits found for issue #1094: 0
+2024-12-02 12:36:51,331 - WARNING - No commits found for issue #1094, skipping...
+2024-12-02 12:36:51,331 - INFO - Processing issue #1095
+2024-12-02 12:36:51,331 - INFO - Searching for commits related to issue number: 1095
+2024-12-02 12:36:51,339 - INFO - Total commits found for issue #1095: 0
+2024-12-02 12:36:51,340 - WARNING - No commits found for issue #1095, skipping...
+2024-12-02 12:36:51,340 - INFO - Processing issue #1096
+2024-12-02 12:36:51,341 - INFO - Searching for commits related to issue number: 1096
+2024-12-02 12:36:51,346 - INFO - Total commits found for issue #1096: 0
+2024-12-02 12:36:51,347 - WARNING - No commits found for issue #1096, skipping...
+2024-12-02 12:36:51,347 - INFO - Processing issue #1097
+2024-12-02 12:36:51,348 - INFO - Searching for commits related to issue number: 1097
+2024-12-02 12:36:51,356 - INFO - Total commits found for issue #1097: 0
+2024-12-02 12:36:51,356 - WARNING - No commits found for issue #1097, skipping...
+2024-12-02 12:36:51,357 - INFO - Processing issue #1098
+2024-12-02 12:36:51,357 - INFO - Searching for commits related to issue number: 1098
+2024-12-02 12:36:51,366 - INFO - Total commits found for issue #1098: 0
+2024-12-02 12:36:51,367 - WARNING - No commits found for issue #1098, skipping...
+2024-12-02 12:36:51,367 - INFO - Processing issue #1099
+2024-12-02 12:36:51,367 - INFO - Searching for commits related to issue number: 1099
+2024-12-02 12:36:51,372 - INFO - Total commits found for issue #1099: 0
+2024-12-02 12:36:51,372 - WARNING - No commits found for issue #1099, skipping...
+2024-12-02 12:36:51,373 - INFO - Processing issue #1100
+2024-12-02 12:36:51,373 - INFO - Searching for commits related to issue number: 1100
+2024-12-02 12:36:51,380 - INFO - Total commits found for issue #1100: 0
+2024-12-02 12:36:51,381 - WARNING - No commits found for issue #1100, skipping...
+2024-12-02 12:36:51,381 - INFO - Dataset successfully saved to 'data/issue_dataset.jsonl'
+2024-12-02 12:36:51,382 - INFO - Issue Dataset Creation Script finished.

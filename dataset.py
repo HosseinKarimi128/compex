@@ -6,7 +6,7 @@ from gitcodes import get_codebase_before_commit, get_commit_files, get_issue_com
 from metrics import get_all_metrics  # Importing the metrics function
 
 
-def create_issue_dataset(repo, issue_numbers, tokenizer, model, sentencebert_model, owner, repo_name, logger, output_file='data/issue_dataset.jsonl', repo_path=''):
+def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name, logger, output_file='data/issue_dataset.jsonl', repo_path=''):
     """
     Create a dataset with specified columns for given issues and save it in JSON Lines format.
 
@@ -15,7 +15,6 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, sentencebert_mod
     - issue_numbers (iterable): Iterable of issue numbers to process.
     - tokenizer: Tokenizer for CodeBERT.
     - model: Pre-trained CodeBERT model.
-    - sentencebert_model: Pre-trained Sentence-BERT model.
     - owner (str): Repository owner.
     - repo_name (str): Repository name.
     - logger: Logger instance for logging.
@@ -43,7 +42,7 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, sentencebert_mod
                 issue_description = get_issue_description(issue_number, owner, repo_name, logger)
 
                 # Generate embedding for issue description
-                issue_description_embedding = generate_issue_description_embedding(issue_description, sentencebert_model, logger)
+                issue_description_embedding = generate_issue_description_embedding(issue_description, model, tokenizer, logger)
 
                 # Sort commits by commit date to find the first commit
                 sorted_commits = sorted(issue_commits, key=lambda c: c.committed_date)

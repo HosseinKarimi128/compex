@@ -56,7 +56,7 @@ from embeddings import generate_code_embedding, generate_issue_description_embed
 from gitcodes import get_codebase_before_commit, get_commit_files, get_issue_commits, get_issue_description
 
 
-def create_issue_dataset(repo, issue_numbers, tokenizer, model, sentencebert_model, owner, repo_name, logger, output_file='data/issue_dataset.jsonl'):
+def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name, logger, output_file='data/issue_dataset.jsonl'):
     """
     Create a dataset with specified columns for given issues and save it in JSON Lines format.
 
@@ -65,7 +65,6 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, sentencebert_mod
     - issue_numbers (iterable): Iterable of issue numbers to process.
     - tokenizer: Tokenizer for CodeBERT.
     - model: Pre-trained CodeBERT model.
-    - sentencebert_model: Pre-trained Sentence-BERT model.
     - owner (str): Repository owner.
     - repo_name (str): Repository name.
     - logger: Logger instance for logging.
@@ -92,7 +91,7 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, sentencebert_mod
                 issue_description = get_issue_description(issue_number, owner, repo_name, logger)
 
                 # Generate embedding for issue description
-                issue_description_embedding = generate_issue_description_embedding(issue_description, sentencebert_model, logger)
+                issue_description_embedding = generate_issue_description_embedding(issue_description, model, tokenizer, logger)
 
                 # Sort commits by commit date to find the first commit
                 sorted_commits = sorted(issue_commits, key=lambda c: c.committed_date)
@@ -146,7 +145,6 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, sentencebert_mod
 
 # ----- Begin embeddings.py -----
 from transformers import AutoTokenizer, AutoModel # type: ignore
-from sentence_transformers import SentenceTransformer # type: ignore
 import torch # type: ignore
 
 def load_codebert_model(model_name='microsoft/codebert-base'):
@@ -200,30 +198,13 @@ def generate_code_embedding(codebase, tokenizer, model, logger):
         logger.error(f"Error during embedding generation: {e}")
         return None
 
-def load_sentencebert_model(model_name='sentence-transformers/all-MiniLM-L6-v2', logger=None):
+def generate_issue_description_embedding(description, model, tokenizer, logger):
     """
-    Load the Sentence-BERT model for embedding issue descriptions.
-
-    Parameters:
-    - model_name (str): Hugging Face model identifier for Sentence-BERT.
-
-    Returns:
-    - model: Pre-trained Sentence-BERT model.
-    """
-    try:
-        model = SentenceTransformer(model_name)
-        return model
-    except Exception as e:
-        logger.error(f"Failed to load Sentence-BERT model '{model_name}': {e}")
-        raise
-
-def generate_issue_description_embedding(description, sentencebert_model, logger):
-    """
-    Generate an embedding for the given issue description using Sentence-BERT.
+    Generate an embedding for the given issue description using CodeBERT.
 
     Parameters:
     - description (str): The issue description text.
-    - sentencebert_model: Pre-trained Sentence-BERT model.
+    - model: Pre-trained CodeBERT model.
     - logger: Logger instance for logging.
 
     Returns:
@@ -234,9 +215,21 @@ def generate_issue_description_embedding(description, sentencebert_model, logger
         return None
 
     try:
-        # Generate embedding
-        embedding = sentencebert_model.encode(description, show_progress_bar=False)
-        return embedding.tolist()
+        # Tokenize the input description
+        inputs = tokenizer(description, return_tensors='pt', truncation=True, max_length=512)
+
+        # Get model outputs
+        with torch.no_grad():
+            outputs = model(**inputs)
+
+        # Perform mean pooling on the token embeddings
+        embeddings = outputs.last_hidden_state.mean(dim=1).squeeze()
+
+        # Convert to CPU and detach from the computation graph
+        embeddings = embeddings.cpu().numpy()
+
+        return embeddings.tolist()
+    
     except Exception as e:
         logger.error(f"Error during issue description embedding generation: {e}")
         return None
@@ -427,7 +420,7 @@ import sys
 
 from _logging import setup_logging
 from dataset import create_issue_dataset
-from embeddings import load_codebert_model, load_sentencebert_model
+from embeddings import load_codebert_model
 from gitcodes import get_repo
 from _globals import OWNER, REPO_NAME
 
@@ -518,14 +511,6 @@ def main():
         logger.error(f"Error loading CodeBERT model: {e}")
         sys.exit(1)
 
-    # Load Sentence-BERT model
-    logger.info("Loading Sentence-BERT model for issue description embeddings...")
-    try:
-        sentencebert_model = load_sentencebert_model(model_name=args.description_embedder, logger=logger)
-        logger.info("Sentence-BERT model loaded successfully.")
-    except Exception as e:
-        logger.error(f"Error loading Sentence-BERT model: {e}")
-        sys.exit(1)
 
     # Get Git repository
     repo = get_repo(args.repo_path, logger)
