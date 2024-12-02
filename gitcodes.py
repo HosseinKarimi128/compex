@@ -150,3 +150,46 @@ def get_codebase_before_commit(repo, commit, logger):
         logger.error(f"Error extracting codebase before commit {commit.hexsha}: {e}")
         return ""
 
+def get_codebase_after_commit(repo, commit, logger):
+    """
+    Extract the codebase right after the specified commit.
+
+    Parameters:
+    - repo: Git repository object.
+    - commit: Git commit object.
+    - logger: Logger instance for logging.
+
+    Returns:
+    - codebase (str): Concatenated contents of all relevant files before the commit.
+    """
+    logger.info(f"Extracting codebase after commit: {commit.hexsha}")
+    try:
+    
+        codebase = ""
+        tree = commit.tree
+        if not tree:
+            logger.warning(f"Commit {commit.hexsha} has no tree. Returning empty codebase.")
+            return ""
+        total_len = 0
+        for blob in tree.traverse():
+            if blob.type == 'blob':
+                try:
+                    # Filter for specific file types if necessary
+                    if not blob.path.endswith(('.py', '.js', '.java', '.cpp', '.c', '.rb', '.go', '.ts')):
+                        continue
+
+                    # Decode the blob content as UTF-8 text
+                    content = blob.data_stream.read().decode('utf-8')
+                    total_len += len(content)
+                    codebase += content + "\n"
+                except UnicodeDecodeError:
+                    # Skip binary files or files with decoding issues
+                    logger.debug(f"Skipping non-text file: {blob.path}")
+                    continue
+
+        logger.info(f"Extracted codebase after commit {commit.hexsha}")
+        return codebase
+    except Exception as e:
+        logger.error(f"Error extracting codebase after commit {commit.hexsha}: {e}")
+        return ""
+

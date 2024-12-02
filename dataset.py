@@ -2,7 +2,7 @@ import json
 import os
 
 from embeddings import generate_code_embedding, generate_issue_description_embedding
-from gitcodes import get_codebase_before_commit, get_commit_files, get_issue_commits, get_issue_description
+from gitcodes import get_codebase_before_commit, get_codebase_after_commit, get_commit_files, get_issue_commits, get_issue_description
 from metrics import get_all_metrics  # Importing the metrics function
 
 
@@ -50,12 +50,21 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
                 first_commit_hash = first_commit.hexsha
                 logger.info(f"First commit for issue #{issue_number}: {first_commit_hash}")
 
+                last_commit = sorted_commits[-1]
+                last_commit_hash = last_commit.hexsha
+                logger.info(f"Last commit for issue #{issue_number}: {last_commit_hash}")
+
                 # Get codebase before the first commit
                 codebase_before = get_codebase_before_commit(repo, first_commit, logger)
+                codebase_after = get_codebase_after_commit(repo, last_commit, logger)
 
-                # Generate embedding for codebase
-                codebase_embedding = generate_code_embedding(codebase_before, tokenizer, model, logger)
 
+                # Generate embedding for codebase before first commit
+                codebase_embedding_before = generate_code_embedding(codebase_before, tokenizer, model, logger)
+
+                # Generate embedding for codebase after last commit
+                codebase_embedding_after = generate_code_embedding(codebase_after, tokenizer, model, logger)
+                
                 # Calculate NOC, NOCF, NOI, NOD
                 noc = len(issue_commits)
                 nocf = 0
@@ -71,7 +80,9 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
 
                 # Calculate additional code metrics
                 logger.info(f"Calculating code metrics for issue #{issue_number}")
-                metrics = get_all_metrics(codebase_before, repo_path)
+                metrics_before = get_all_metrics(codebase_before, repo_path)
+                metrics_after = get_all_metrics(codebase_after, repo_path)
+
 
                 # Prepare the data record
                 record = {
@@ -79,18 +90,30 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
                     'issue_description': issue_description,
                     'issue_description_embedding': issue_description_embedding if issue_description_embedding else [],
                     'first_commit': first_commit_hash,
-                    'codebase_embedding_before_first_commit': codebase_embedding if codebase_embedding else [],
+                    'last_commit': last_commit_hash,
+                    'codebase_embedding_before_first_commit': codebase_embedding_before if codebase_embedding_before else [],
+                    'codebase_embedding_after_last_commit': codebase_embedding_after if codebase_embedding_after else [],
+
                     'NOC': noc,
                     'NOCF': nocf,
                     'NOI': noi,
                     'NOD': nod,
-                    'LOC': metrics.get('LOC'),
-                    'CyclomaticComplexity': metrics.get('CyclomaticComplexity'),
-                    'HalsteadMetrics': metrics.get('HalsteadMetrics'),
-                    'MaintainabilityIndex': metrics.get('MaintainabilityIndex'),
-                    'CodeDuplication': metrics.get('CodeDuplication'),
-                    'Coupling': metrics.get('coupling'),
-                    'Cohesion': metrics.get('cohesion')
+
+                    'LOC_before': metrics_before.get('LOC'),
+                    'CyclomaticComplexity_before': metrics_before.get('CyclomaticComplexity'),
+                    'HalsteadMetrics_before': metrics_before.get('HalsteadMetrics'),
+                    'MaintainabilityIndex_before': metrics_before.get('MaintainabilityIndex'),
+                    'CodeDuplication_before': metrics_before.get('CodeDuplication'),
+                    'Coupling_before': metrics_before.get('coupling'),
+                    'Cohesion_before': metrics_before.get('cohesion'),
+
+                    'LOC_after': metrics_after.get('LOC'),
+                    'CyclomaticComplexity_after': metrics_after.get('CyclomaticComplexity'),
+                    'HalsteadMetrics_after': metrics_after.get('HalsteadMetrics'),
+                    'MaintainabilityIndex_after': metrics_after.get('MaintainabilityIndex'),
+                    'CodeDuplication_after': metrics_after.get('CodeDuplication'),
+                    'Coupling_after': metrics_after.get('coupling'),
+                    'Cohesion_after': metrics_after.get('cohesion')
                 }
 
                 # Write the JSON object as a single line
