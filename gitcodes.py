@@ -120,9 +120,9 @@ def get_codebase_before_commit(repo, commit, logger):
         parents = commit.parents
         if not parents:
             logger.warning(f"Commit {commit.hexsha} has no parents. Returning empty codebase.")
-            return ""
+            return {}
         parent_commit = parents[0]
-        codebase = ""
+        codebase = {}
         tree = parent_commit.tree
         total_len = 0
         for blob in tree.traverse():
@@ -135,7 +135,7 @@ def get_codebase_before_commit(repo, commit, logger):
                     # Decode the blob content as UTF-8 text
                     content = blob.data_stream.read().decode('utf-8')
                     total_len += len(content)
-                    codebase += content + "\n"
+                    codebase[blob.path] = content
                 except UnicodeDecodeError:
                     # Skip binary files or files with decoding issues
                     logger.debug(f"Skipping non-text file: {blob.path}")
@@ -148,7 +148,7 @@ def get_codebase_before_commit(repo, commit, logger):
         return codebase
     except Exception as e:
         logger.error(f"Error extracting codebase before commit {commit.hexsha}: {e}")
-        return ""
+        return {}
 
 def get_codebase_after_commit(repo, commit, logger):
     """
@@ -165,11 +165,11 @@ def get_codebase_after_commit(repo, commit, logger):
     logger.info(f"Extracting codebase after commit: {commit.hexsha}")
     try:
     
-        codebase = ""
+        codebase = {}
         tree = commit.tree
         if not tree:
             logger.warning(f"Commit {commit.hexsha} has no tree. Returning empty codebase.")
-            return ""
+            return {}
         total_len = 0
         for blob in tree.traverse():
             if blob.type == 'blob':
@@ -181,7 +181,7 @@ def get_codebase_after_commit(repo, commit, logger):
                     # Decode the blob content as UTF-8 text
                     content = blob.data_stream.read().decode('utf-8')
                     total_len += len(content)
-                    codebase += content + "\n"
+                    codebase[blob.path] = content
                 except UnicodeDecodeError:
                     # Skip binary files or files with decoding issues
                     logger.debug(f"Skipping non-text file: {blob.path}")
@@ -191,5 +191,5 @@ def get_codebase_after_commit(repo, commit, logger):
         return codebase
     except Exception as e:
         logger.error(f"Error extracting codebase after commit {commit.hexsha}: {e}")
-        return ""
+        return {}
 

@@ -29,13 +29,16 @@ def generate_code_embedding(codebase, tokenizer, model, logger):
     Returns:
     - List of floats representing the embedding vector.
     """
-    if not codebase.strip():
+    if len(codebase) == 0:
         logger.warning("Empty codebase provided for embedding.")
         return None
 
     try:
         # Tokenize the input code
-        inputs = tokenizer(codebase, return_tensors='pt', truncation=True, max_length=512)
+        stacked_codebase = ""
+        for code in codebase.values():
+            stacked_codebase += code 
+        inputs = tokenizer(stacked_codebase, return_tensors='pt', truncation=True, max_length=512)
 
         # Get model outputs
         with torch.no_grad():
@@ -64,7 +67,7 @@ def generate_issue_description_embedding(description, model, tokenizer, logger):
     Returns:
     - List of floats representing the embedding vector.
     """
-    if not description.strip():
+    if len(description) == 0:
         logger.warning("Empty issue description provided for embedding.")
         return None
 
