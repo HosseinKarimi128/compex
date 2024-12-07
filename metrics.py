@@ -142,7 +142,7 @@ def calculate_maintainability_index(halstead_volume, complexity, sloc, comments)
     comments_scale = math.sqrt(2.46 * math.radians(comments))
     # Non-normalized MI
     nn_mi = (
-        171 * 2
+        171 * 1.8
         - 5.2 * volume_scale
         - 0.23 * complexity
         - 16.2 * sloc_scale

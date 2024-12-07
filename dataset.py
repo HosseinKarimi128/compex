@@ -100,6 +100,7 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
                     'NOD': nod,
 
                     'LOC_before': metrics_before.get('LOC'),
+                    'Comments_before': metrics_before.get('comments'),
                     'CyclomaticComplexity_before': metrics_before.get('CyclomaticComplexity'),
                     'HalsteadMetrics_before': metrics_before.get('HalsteadMetrics'),
                     'MaintainabilityIndex_before': metrics_before.get('MaintainabilityIndex'),
@@ -108,6 +109,7 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
                     'Cohesion_before': metrics_before.get('cohesion'),
 
                     'LOC_after': metrics_after.get('LOC'),
+                    'Comments_after': metrics_after.get('comments'),
                     'CyclomaticComplexity_after': metrics_after.get('CyclomaticComplexity'),
                     'HalsteadMetrics_after': metrics_after.get('HalsteadMetrics'),
                     'MaintainabilityIndex_after': metrics_after.get('MaintainabilityIndex'),
