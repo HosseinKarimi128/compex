@@ -31,7 +31,7 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
     os.makedirs(output_dir, exist_ok=True)
 
     try:
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open(output_file, 'a', encoding='utf-8') as f:
             for issue_number in issue_numbers:
                 logger.info(f"Processing issue #{issue_number}")
                 issue_commits = get_issue_commits(repo, issue_number, logger)
