@@ -4,7 +4,7 @@ import sys
 from _logging import setup_logging
 from dataset import create_issue_dataset
 from embeddings import load_codebert_model
-from gitcodes import get_repo
+from gitcodes import get_repo, get_last_closed_issue
 from _globals import OWNER, REPO_NAME
 
 
@@ -29,13 +29,15 @@ def main():
         help='Path to the cloned GitHub repository.'
     )
     parser.add_argument(
-        'start_issue_number',
+        '--start_issue_number',
         type=int,
+        default=1,
         help='Starting issue number (inclusive).'
     )
     parser.add_argument(
-        'end_issue_number',
+        '--end_issue_number',
         type=int,
+        default=1,
         help='Ending issue number (inclusive).'
     )
 
@@ -99,7 +101,11 @@ def main():
     repo = get_repo(args.repo_path, logger)
 
     # Define issue numbers
-    issue_numbers = range(args.start_issue_number, args.end_issue_number + 1)
+    if args.end_issue_number == 1:
+        last_issue = get_last_closed_issue(repo, args.owner, args.repo, logger)
+        issue_numbers = range(args.start_issue_number, last_issue + 1)
+    else:
+        issue_numbers = range(args.start_issue_number, args.end_issue_number + 1)
 
     # Create dataset
     create_issue_dataset(

@@ -103,6 +103,43 @@ def get_issue_description(issue_number, owner, repo_name, logger):
         logger.error(f"Error fetching issue description for #{issue_number}: {e}")
         return f"Issue #{issue_number} (error fetching description)"
 
+def get_last_closed_issue(repo, owner, repo_name, logger):
+    """
+    Fetch the description of a GitHub issue.
+
+    Parameters:
+    - issue_number (int): Issue number.
+    - owner (str): Repository owner.
+    - repo_name (str): Repository name.
+    - logger: Logger instance for logging.
+
+    Returns:
+    - description (str): Description of the issue.
+    """
+    token = os.environ.get('GITHUB_TOKEN')
+    url = f"https://api.github.com/repos/{owner}/{repo_name}/issues"
+    headers = {"Authorization": f"token {token}"} if token else {}
+    params = {
+        "state": "closed",
+        "per_page": "1",
+        "direction": "desc"
+    }
+    logger.info(f"Fetching the last close issue.")
+    try:
+        response = requests.get(url, headers=headers, params=params)
+        if response.status_code == 200:
+            last_issue = response.json()[0]["number"]
+            return last_issue
+        else:
+            logger.warning(f"Last issue not found or access denied. Status Code: {response.status_code}")
+            return f"Last issue (not found)"
+    except Exception as e:
+        logger.error(f"Error fetching last issue: {e}")
+        return f"Last issue (error fetching description)"
+
+
+
+
 def get_codebase_before_commit(repo, commit, logger):
     """
     Extract the codebase right before the specified commit.
@@ -129,7 +166,7 @@ def get_codebase_before_commit(repo, commit, logger):
             if blob.type == 'blob':
                 try:
                     # Filter for specific file types if necessary
-                    if not blob.path.endswith(('.py', '.js', '.java', '.cpp', '.c', '.rb', '.go', '.ts')):
+                    if not blob.path.endswith(('.py', '.js', '.java', '.cpp', '.c', '.rb', '.go', '.ts', '.dart', '.html')):
                         continue
 
                     # Decode the blob content as UTF-8 text
