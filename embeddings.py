@@ -1,6 +1,6 @@
 from transformers import AutoTokenizer, AutoModel # type: ignore
 import torch # type: ignore
-
+DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 def load_codebert_model(model_name='microsoft/codebert-base'):
     """
     Load the CodeBERT tokenizer and model.
@@ -12,8 +12,8 @@ def load_codebert_model(model_name='microsoft/codebert-base'):
     - tokenizer: Tokenizer for CodeBERT.
     - model: Pre-trained CodeBERT model.
     """
-    tokenizer = AutoTokenizer.from_pretrained(model_name, device_map = "cuda:0" if torch.cuda.is_available() else "cpu")
-    model = AutoModel.from_pretrained(model_name, device_map = "cuda:0" if torch.cuda.is_available() else "cpu")
+    tokenizer = AutoTokenizer.from_pretrained(model_name).to(DEVICE)
+    model = AutoModel.from_pretrained(model_name).to(DEVICE)
     return tokenizer, model
 
 def generate_code_embedding(codebase, tokenizer, model, logger):
