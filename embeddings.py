@@ -12,8 +12,8 @@ def load_codebert_model(model_name='microsoft/codebert-base'):
     - tokenizer: Tokenizer for CodeBERT.
     - model: Pre-trained CodeBERT model.
     """
-    tokenizer = AutoTokenizer.from_pretrained(model_name).to(DEVICE)
-    model = AutoModel.from_pretrained(model_name).to(DEVICE)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModel.from_pretrained(model_name)
     return tokenizer, model
 
 def generate_code_embedding(codebase, tokenizer, model, logger):
