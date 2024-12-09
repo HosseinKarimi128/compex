@@ -42,7 +42,7 @@ def generate_code_embedding(codebase, tokenizer, model, logger):
 
         # Get model outputs
         with torch.no_grad():
-            outputs = model(**inputs)
+            outputs = model(**inputs, device="cuda0" if torch.cuda.is_available() else "cpu")
 
         # Perform mean pooling on the token embeddings
         embeddings = outputs.last_hidden_state.mean(dim=1).squeeze()
