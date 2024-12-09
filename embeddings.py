@@ -12,7 +12,7 @@ def load_codebert_model(model_name='microsoft/codebert-base'):
     - tokenizer: Tokenizer for CodeBERT.
     - model: Pre-trained CodeBERT model.
     """
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, device_map = "cuda:0" if torch.cuda.is_available() else "cpu")
     model = AutoModel.from_pretrained(model_name, device_map = "cuda:0" if torch.cuda.is_available() else "cpu")
     return tokenizer, model
 
