@@ -73,11 +73,11 @@ def generate_issue_description_embedding(description, model, tokenizer, logger):
 
     try:
         # Tokenize the input description
-        inputs = tokenizer(description, return_tensors='pt', truncation=True, max_length=512)
+        inputs = tokenizer(description, return_tensors='pt', truncation=True, max_length=512).to(DEVICE)
 
         # Get model outputs
         with torch.no_grad():
-            outputs = model(**inputs)
+            outputs = model.to(DEVICE)(**inputs)
 
         # Perform mean pooling on the token embeddings
         embeddings = outputs.last_hidden_state.mean(dim=1).squeeze()
