@@ -40,7 +40,9 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
                     continue
 
                 issue_description = get_issue_description(issue_number, owner, repo_name, logger)
-                if ("(not found)" in issue_description or "(error fetching description)" in issue_description):
+                if ("(not found)" in issue_description or 
+                    "(error fetching description)" in issue_description or
+                    issue_description == ""):
                     continue
                 # Generate embedding for issue description
                 issue_description_embedding = generate_issue_description_embedding(issue_description, model, tokenizer, logger)
