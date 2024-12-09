@@ -13,7 +13,7 @@ def load_codebert_model(model_name='microsoft/codebert-base'):
     - model: Pre-trained CodeBERT model.
     """
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModel.from_pretrained(model_name, device_map=DEVICE)
+    model = AutoModel.from_pretrained(model_name)
     return tokenizer, model
 
 def generate_code_embedding(codebase, tokenizer, model, logger):
@@ -42,7 +42,7 @@ def generate_code_embedding(codebase, tokenizer, model, logger):
 
         # Get model outputs
         with torch.no_grad():
-            outputs = model(**inputs)
+            outputs = model(**inputs).to(DEVICE)
 
         # Perform mean pooling on the token embeddings
         embeddings = outputs.last_hidden_state.mean(dim=1).squeeze()
