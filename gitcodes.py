@@ -132,10 +132,10 @@ def get_last_closed_issue(repo, owner, repo_name, logger):
             return last_issue
         else:
             logger.warning(f"Last issue not found or access denied. Status Code: {response.status_code}")
-            return f"Last issue (not found)"
+            return -1
     except Exception as e:
         logger.error(f"Error fetching last issue: {e}")
-        return f"Last issue (error fetching description)"
+        return -1
 
 
 
