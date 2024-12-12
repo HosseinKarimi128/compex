@@ -2,7 +2,7 @@ import os
 import sys
 import git  # type: ignore
 import requests  # type: ignore
-
+TOKEN_COUNTER = 0
 def get_repo(path, logger):
     """
     Get the Git repository at the specified path.
@@ -86,7 +86,7 @@ def get_issue_description(issue_number, owner, repo_name, logger):
     Returns:
     - description (str): Description of the issue.
     """
-    token = os.environ.get('GITHUB_TOKEN')
+    token = os.environ.get(f'GITHUB_TOKEN{TOKEN_COUNTER}')
     url = f"https://api.github.com/repos/{owner}/{repo_name}/issues/{issue_number}"
     headers = {"Authorization": f"token {token}"} if token else {}
     logger.info(f"Fetching description for issue #{issue_number}")
@@ -96,6 +96,18 @@ def get_issue_description(issue_number, owner, repo_name, logger):
             description = response.json().get('body', f"Issue #{issue_number}")
             logger.debug(f"Issue #{issue_number} description fetched successfully.")
             return description
+        elif response.status_code == 403:
+            TOKEN_COUNTER  = (TOKEN_COUNTER + 1) % 10
+            token = os.environ.get(f'GITHUB_TOKEN{TOKEN_COUNTER}')
+            headers = {"Authorization": f"token {token}"} if token else {}
+            response = requests.get(url, headers=headers)
+            if response.status_code == 200:
+                description = response.json().get('body', f"Issue #{issue_number}")
+                logger.debug(f"Issue #{issue_number} description fetched successfully.")
+                return description
+            else:
+                logger.warning(f"Last issue not found or access denied. Status Code: {response.status_code}")
+                return -1
         else:
             logger.warning(f"Issue #{issue_number} not found or access denied. Status Code: {response.status_code}")
             return f"Issue #{issue_number} (not found)"
@@ -116,7 +128,7 @@ def get_last_closed_issue(repo, owner, repo_name, logger):
     Returns:
     - description (str): Description of the issue.
     """
-    token = os.environ.get('GITHUB_TOKEN')
+    token = os.environ.get(f'GITHUB_TOKEN{TOKEN_COUNTER}')
     url = f"https://api.github.com/repos/{owner}/{repo_name}/issues"
     headers = {"Authorization": f"token {token}"} if token else {}
     params = {
@@ -130,6 +142,17 @@ def get_last_closed_issue(repo, owner, repo_name, logger):
         if response.status_code == 200:
             last_issue = response.json()[0]["number"]
             return last_issue
+        elif response.status_code == 403:
+            TOKEN_COUNTER  = (TOKEN_COUNTER + 1) % 10
+            token = os.environ.get(f'GITHUB_TOKEN{TOKEN_COUNTER}')
+            headers = {"Authorization": f"token {token}"} if token else {}
+            response = requests.get(url, headers=headers, params=params)
+            if response.status_code == 200:
+                last_issue = response.json()[0]["number"]
+                return last_issue
+            else:
+                logger.warning(f"Last issue not found or access denied. Status Code: {response.status_code}")
+                return -1
         else:
             logger.warning(f"Last issue not found or access denied. Status Code: {response.status_code}")
             return -1
