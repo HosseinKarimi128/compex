@@ -4,7 +4,7 @@ import sys
 from _logging import setup_logging
 from dataset import create_issue_dataset
 from embeddings import load_codebert_model
-from gitcodes import get_repo, get_last_closed_issue
+from gitcodes import GitCodes
 from _globals import OWNER, REPO_NAME
 
 
@@ -82,6 +82,9 @@ def main():
     # Log script start
     logger.info("Starting Issue Dataset Creation Script.")
 
+    # Creating GitCode object
+    gitcode = GitCodes()
+
     # Validate issue range
     if args.start_issue_number > args.end_issue_number:
         logger.error("Start issue number must be less than or equal to end issue number.")
@@ -98,11 +101,11 @@ def main():
 
 
     # Get Git repository
-    repo = get_repo(args.repo_path, logger)
+    repo = gitcode.get_repo(args.repo_path, logger)
 
     # Define issue numbers
     if args.end_issue_number == 1:
-        last_issue = get_last_closed_issue(repo, args.owner, args.repo, logger)
+        last_issue = gitcode.get_last_closed_issue(repo, args.owner, args.repo, logger)
         issue_numbers = range(args.start_issue_number, last_issue + 1)
     else:
         issue_numbers = range(args.start_issue_number, args.end_issue_number + 1)

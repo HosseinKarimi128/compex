@@ -2,7 +2,7 @@ import json
 import os
 
 from embeddings import generate_code_embedding, generate_issue_description_embedding
-from gitcodes import get_codebase_before_commit, get_codebase_after_commit, get_commit_files, get_issue_commits, get_issue_description
+from gitcodes import GitCodes
 from metrics import get_all_metrics  # Importing the metrics function
 
 
@@ -29,17 +29,18 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
     # Ensure output directory exists
     output_dir = os.path.dirname(output_file)
     os.makedirs(output_dir, exist_ok=True)
+    gitcodes = GitCodes()
 
     try:
         with open(output_file, 'a', encoding='utf-8') as f:
             for issue_number in issue_numbers:
                 logger.info(f"Processing issue #{issue_number}")
-                issue_commits = get_issue_commits(repo, issue_number, logger)
+                issue_commits = gitcodes.get_issue_commits(repo, issue_number, logger)
                 if not issue_commits:
                     logger.warning(f"No commits found for issue #{issue_number}, skipping...")
                     continue
 
-                issue_description = get_issue_description(issue_number, owner, repo_name, logger)
+                issue_description = gitcodes.get_issue_description(issue_number, owner, repo_name, logger)
                 if ("(not found)" in issue_description or 
                     "(error fetching description)" in issue_description or
                     issue_description == ""):
@@ -58,8 +59,8 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
                 logger.info(f"Last commit for issue #{issue_number}: {last_commit_hash}")
 
                 # Get codebase before the first commit
-                codebase_before = get_codebase_before_commit(repo, first_commit, logger)
-                codebase_after = get_codebase_after_commit(repo, last_commit, logger)
+                codebase_before = gitcodes.get_codebase_before_commit(repo, first_commit, logger)
+                codebase_after = gitcodes.get_codebase_after_commit(repo, last_commit, logger)
 
 
                 # Generate embedding for codebase before first commit
@@ -75,7 +76,7 @@ def create_issue_dataset(repo, issue_numbers, tokenizer, model, owner, repo_name
                 noi = 0
 
                 for commit in issue_commits:
-                    files = get_commit_files(repo, commit.hexsha, logger)
+                    files = gitcodes.get_commit_files(repo, commit.hexsha, logger)
                     nocf += len(files)
                     for file, stats in files.items():
                         nod += stats.get('deletions', 0)
